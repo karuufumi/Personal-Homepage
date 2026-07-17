@@ -1,0 +1,117 @@
+---
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Socials from "@/components/Socials.astro";
+import Card from "@/components/Card.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import config from "@/config";
+import { projects } from "@/data/projects";
+
+const { socials, posts: postsConfig } = config;
+
+const locale = Astro.currentLocale ?? config.site.lang;
+
+const posts = await getCollection("posts");
+const sortedPosts = getSortedPosts(posts);
+const recentPosts = sortedPosts;
+const homePath = getRelativeLocaleUrl(locale, "");
+---
+
+<Layout>
+  <Header />
+  <main
+    id="main-content"
+    data-layout="index"
+    data-home-path={homePath}
+    class="app-layout"
+  >
+    <section id="introduction" class="border-border border-b pt-8 pb-8">
+      <p class="text-accent text-sm font-semibold tracking-widest uppercase">
+        Brief introduction
+      </p>
+      <h1 class="my-4 text-4xl font-bold sm:my-6 sm:text-5xl">Nguyễn Tiến Khang</h1>
+      <p class="max-w-3xl">
+        Computer Science undergraduate based in An Nhon, Ho Chi Minh City. I
+        build reliable APIs, delivery workflows, and security-minded tools with
+        clear architecture and observable behavior.
+      </p>
+      <p class="mt-2">
+        Explore my{" "}
+        <LinkButton
+          class="hover:text-accent underline decoration-dashed underline-offset-4"
+          href={getRelativeLocaleUrl(locale, "projects")}
+        >
+          projects
+        </LinkButton>{" "}
+        or read notes on systems, cloud, security, and applied engineering.
+      </p>
+      <div class="mt-5 space-y-1">
+        <p>Email: <a class="text-accent hover:underline" href="mailto:khangtien24@gmail.com">khangtien24@gmail.com</a></p>
+        <p>Phone: <a class="text-accent hover:underline" href="tel:+84903049939">0903 049 939</a></p>
+      </div>
+      {socials.length > 0 && <div class="mt-4 flex max-sm:flex-col sm:items-center"><div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Find me online:</div><Socials /></div>}
+    </section>
+
+    <section id="interests" class="border-border border-b py-12">
+      <h2 class="text-2xl font-semibold tracking-wide">Interests</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-3">
+        <article><h3 class="font-semibold">Backend systems</h3><p class="mt-2">APIs, service boundaries, data flows, and durable workflows.</p></article>
+        <article><h3 class="font-semibold">Cloud and delivery</h3><p class="mt-2">Containers, CI/CD, deployments, and operational visibility.</p></article>
+        <article><h3 class="font-semibold">Security and reliability</h3><p class="mt-2">Restricted runtimes, observable behavior, and practical safeguards.</p></article>
+      </div>
+    </section>
+
+    <section id="featured-projects" class="border-border border-b py-12">
+      <h2 class="text-2xl font-semibold tracking-wide">Featured Projects</h2>
+      <div class="mt-6 space-y-6">
+        {projects.slice(0, 2).map(project => (
+          <article>
+            <p class="text-accent text-sm font-medium">{project.status}</p>
+            <h3 class="mt-1 text-lg font-medium"><a class="text-accent hover:underline" href={`/projects/${project.slug}`}>{project.title}</a></h3>
+            <p class="mt-1">{project.description}</p>
+          </article>
+        ))}
+      </div>
+      <div class="mt-6"><LinkButton href={getRelativeLocaleUrl(locale, "projects")}>View all projects <IconArrowRight class="inline-block rtl:-rotate-180" /></LinkButton></div>
+    </section>
+
+    {
+      recentPosts.length > 0 && (
+        <section id="recent-posts" class="pt-12 pb-6">
+          <h2 class="text-2xl font-semibold tracking-wide">
+            Recent Posts
+          </h2>
+          <ul>
+            {recentPosts.slice(0, postsConfig.perIndex).map(data => (
+              <Card variant="h3" {...data} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <div class="my-8 text-center">
+      <LinkButton href={getRelativeLocaleUrl(locale, "posts")}>
+        All posts
+        <IconArrowRight class="inline-block rtl:-rotate-180" />
+      </LinkButton>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
+      ?.dataset;
+    const baseRoot = import.meta.env.BASE_URL.replace(/\/?$/, "/");
+    if (indexLayout?.layout) {
+      sessionStorage.setItem("backUrl", indexLayout.homePath ?? baseRoot);
+    }
+  });
+</script>
