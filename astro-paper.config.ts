@@ -2,7 +2,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://karuufumi.github.io/",
+    url: "https://karuuntk.com/",
     title: "Nguyễn Tiến Khang",
     description: "Computer Science undergraduate building reliable backend, cloud, and security-minded systems.",
     author: "Nguyễn Tiến Khang",

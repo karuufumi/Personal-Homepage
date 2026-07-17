@@ -1,5 +1,6 @@
 ---
 import { Font } from "astro:assets";
+import { ClientRouter } from "astro:transitions";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { resolveDefaultOgImagePath } from "@/utils/resolveDefaultOgImagePath";
 import { getAssetPath } from "@/utils/withBase";
@@ -46,7 +47,10 @@ const rssHref = getRelativeLocaleUrl(
     <!-- Font -->
     <Font
       cssVariable="--font-google-sans-code"
-      preload={[{ subset: "latin", weight: 400, style: "normal" }]}
+      preload={[
+        { subset: "latin", weight: 400, style: "normal" },
+        { subset: "latin", weight: 700, style: "normal" },
+      ]}
     />
 
     <!-- Primary meta -->
@@ -117,6 +121,7 @@ const rssHref = getRelativeLocaleUrl(
   <body
     class="bg-background font-app text-foreground selection:bg-accent/75 selection:text-accent-foreground flex min-h-svh flex-col"
   >
+    <ClientRouter />
     <slot />
     <script>
       import "@/scripts/theme";
