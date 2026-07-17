@@ -25,8 +25,12 @@
   @apply max-w-3xl;
 }
 
+@utility max-w-shell {
+  @apply max-w-4xl;
+}
+
 @utility app-layout {
-  @apply max-w-app mx-auto w-full px-4;
+  @apply max-w-shell mx-auto w-full px-4;
 }
 
 @utility active-nav {

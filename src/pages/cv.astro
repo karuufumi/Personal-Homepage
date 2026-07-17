@@ -1,0 +1,71 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+---
+
+<Layout
+  title="CV | Nguyễn Tiến Khang"
+  description="Curriculum vitae of Nguyễn Tiến Khang, a Computer Science undergraduate focused on backend, cloud, and reliable systems."
+>
+  <Header />
+  <main id="main-content" class="app-layout py-12">
+    <section class="border-border border-b pb-10">
+      <p class="text-accent text-sm font-semibold tracking-widest uppercase">Curriculum vitae</p>
+      <div class="mt-3 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h1 class="text-4xl font-bold sm:text-5xl">Nguyễn Tiến Khang</h1>
+          <p class="mt-3 text-lg">Computer Science undergraduate focused on backend, cloud, and reliable systems.</p>
+        </div>
+        <a class="text-accent whitespace-nowrap hover:underline" href="/MyCV_new.pdf" download>Download CV (PDF)</a>
+      </div>
+      <p class="mt-5">Ho Chi Minh City, Vietnam · <a class="text-accent hover:underline" href="mailto:khangtien24@gmail.com">khangtien24 [at] gmail [dot] com</a> · <a class="text-accent hover:underline" href="tel:+84903049939">0903 049 939</a></p>
+      <p class="mt-2"><a class="text-accent hover:underline" href="https://github.com/karuufumi" target="_blank">github.com/karuufumi</a> · <a class="text-accent hover:underline" href="https://www.linkedin.com/in/tienkhangnguyen" target="_blank">linkedin.com/in/tienkhangnguyen</a></p>
+    </section>
+
+    <div class="mt-10 space-y-12">
+      <section>
+        <h2 class="text-2xl font-semibold">Profile</h2>
+        <p class="mt-3 max-w-3xl">I build backend and cloud systems that are clear to run, test, and change. My interests include reliable service workflows, containerized delivery, observability, and practical runtime security.</p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold">Education</h2>
+        <div class="mt-4">
+          <div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between"><h3 class="font-semibold">Bachelor of Engineering in Computer Science</h3><p class="text-muted">October 2022 – Present</p></div>
+          <p>Ho Chi Minh City University of Technology, VNU-HCM · Ho Chi Minh City, Vietnam</p>
+          <ul class="mt-3 list-disc space-y-1 ps-6"><li>GPA: 3.2/4.0 (8.1/10)</li><li>Relevant coursework: Data Structures, Computer Architecture, Database Systems, Software Engineering, Operating Systems, and Programming Languages</li></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold">Experience</h2>
+        <div class="mt-4 space-y-7">
+          <article><div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between"><h3 class="font-semibold">Undergraduate Research Assistant</h3><p class="text-muted">September 2024 – February 2025</p></div><p>Data Science Lab, HCMC University of Technology · Ho Chi Minh City, Vietnam</p><ul class="mt-3 list-disc space-y-1 ps-6"><li>Designed RESTful APIs with FastAPI and PostgreSQL for data ingestion and management in computer-vision systems.</li><li>Implemented and trained convolutional neural-network models for traffic object-detection scenarios.</li></ul></article>
+          <article><div class="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between"><h3 class="font-semibold">Independent Software Developer</h3><p class="text-muted">January 2025 – Present</p></div><p>Independent · Ho Chi Minh City, Vietnam</p><ul class="mt-3 list-disc space-y-1 ps-6"><li>Explored federated-learning workflows for privacy-preserving training across distributed clients.</li><li>Contributed to open-source repositories through code reviews, issue triaging, and technical discussions.</li></ul></article>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold">Selected projects</h2>
+        <div class="mt-4 space-y-6">
+          <article><h3 class="font-semibold">Art Museum Companion App</h3><p class="mt-1">Built a full-stack museum companion platform with SwiftUI, NestJS, PostgreSQL, and ChromaDB, including authentication, artwork and tour workflows, semantic search, and AI-assisted recommendations.</p></article>
+          <article><h3 class="font-semibold">Library Management System</h3><p class="mt-1">Developed a layered university library system with .NET, FastAPI, React, PostgreSQL, MongoDB, and Docker, with asynchronous services for borrowing, returns, and catalogue search.</p></article>
+          <article><h3 class="font-semibold">S3-MRS: Self-Studying Room Management System</h3><p class="mt-1">Developed and deployed a full-stack room-management application with React, TypeScript, Express.js, PostgreSQL, MongoDB, Docker, and Railway.</p></article>
+          <article><h3 class="font-semibold">Simple P2P BitTorrent File Transfer App</h3><p class="mt-1">Created a Python file-transfer application with peer discovery, file chunking, seeding, piecewise reassembly, and a lightweight tracker service.</p></article>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold">Certifications and awards</h2>
+        <ul class="mt-4 list-disc space-y-1 ps-6"><li>AWS Certified Solutions Architect – Associate — Amazon Web Services, July 2026</li><li>IELTS 7.0 — IDP Vietnam, May 2022</li><li>OISP Scholarship — Semester 242, VNU-HCM University of Technology</li></ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold">Skills</h2>
+        <div class="mt-4 space-y-2"><p><strong>Languages:</strong> Python, C/C++, JavaScript, TypeScript, Swift, Kotlin, SQL, R, HTML/CSS</p><p><strong>Frameworks:</strong> React, Next.js, Node.js, Express.js, .NET, FastAPI, Spring Boot, Tailwind CSS, PyTorch</p><p><strong>Tools:</strong> Git, Docker, Postman, Selenium, Railway, Render, AWS, Firebase, Azure, Jira, GitHub, GitLab, Apache Kafka</p><p><strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, ChromaDB</p></div>
+      </section>
+    </div>
+  </main>
+  <Footer />
+</Layout>

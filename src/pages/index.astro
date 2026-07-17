@@ -51,7 +51,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
         or read notes on systems, cloud, security, and applied engineering.
       </p>
       <div class="mt-5 space-y-1">
-        <p>Email: <a class="text-accent hover:underline" href="mailto:khangtien24@gmail.com">khangtien24@gmail.com</a></p>
+        <p>Email: <a class="text-accent hover:underline" href="mailto:khangtien24@gmail.com">khangtien24 [at] gmail [dot] com</a></p>
         <p>Phone: <a class="text-accent hover:underline" href="tel:+84903049939">0903 049 939</a></p>
       </div>
       {socials.length > 0 && <div class="mt-4 flex max-sm:flex-col sm:items-center"><div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Find me online:</div><Socials /></div>}
@@ -71,7 +71,7 @@ const homePath = getRelativeLocaleUrl(locale, "");
       <div class="mt-6 space-y-6">
         {projects.slice(0, 2).map(project => (
           <article>
-            <p class="text-accent text-sm font-medium">{project.status}</p>
+            <p class="text-accent flex items-center gap-2 text-sm font-medium"><span>{project.status}</span><span class="border-accent/40 rounded border px-2 py-0.5 text-xs tracking-wide uppercase">{project.progress}</span></p>
             <h3 class="mt-1 text-lg font-medium"><a class="text-accent hover:underline" href={`/projects/${project.slug}`}>{project.title}</a></h3>
             <p class="mt-1">{project.description}</p>
           </article>

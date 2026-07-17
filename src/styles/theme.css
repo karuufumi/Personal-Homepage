@@ -13,22 +13,22 @@
 /* Light theme values */
 :root,
 [data-theme="light"] {
-  --background: #fdfdfd;
+  --background: #fdfbf5;
   --foreground: #282728;
   --accent: #006cac;
   --accent-foreground: #ffffff;
-  --muted: #e6e6e6;
+  --muted: #ece9df;
   --muted-foreground: #6b7280;
-  --border: #ece9e9;
+  --border: #ebe6d8;
 }
 
 /* Dark theme values */
 [data-theme="dark"] {
   --background: #212737;
   --foreground: #eaedf3;
-  --accent: #ff6b01;
-  --accent-foreground: #ffffff;
+  --accent: #72e6a1;
+  --accent-foreground: #10251a;
   --muted: #343f60;
   --muted-foreground: #afb9ca;
-  --border: #ab4b08;
+  --border: #397a57;
 }

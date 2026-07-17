@@ -14,7 +14,7 @@ import { projects } from "@/data/projects";
     <div class="mt-12 space-y-10">
       {projects.map(project => (
         <article class="border-border border-b pb-10">
-          <p class="text-accent text-sm font-medium">{project.status}</p>
+          <p class="text-accent flex items-center gap-2 text-sm font-medium"><span>{project.status}</span><span class="border-accent/40 rounded border px-2 py-0.5 text-xs tracking-wide uppercase">{project.progress}</span></p>
           <h2 class="mt-2 text-2xl font-semibold"><a class="hover:text-accent underline decoration-dashed underline-offset-4" href={`/projects/${project.slug}`}>{project.title}</a></h2>
           <p class="mt-3 max-w-3xl">{project.description}</p>
           <ul class="mt-4 flex flex-wrap gap-2" aria-label={`${project.title} technologies`}>

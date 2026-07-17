@@ -1,0 +1,27 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { photoAlbums } from "@/data/photoAlbums";
+
+export function getStaticPaths() {
+  return photoAlbums.map(album => ({ params: { slug: album.slug }, props: { album } }));
+}
+
+const { album } = Astro.props;
+const dateFormat = new Intl.DateTimeFormat("en", { month: "long", year: "numeric" });
+---
+
+<Layout title={`${album.title} | Photos | Nguyễn Tiến Khang`} description={album.description}>
+  <Header />
+  <main id="main-content" class="app-layout py-12">
+    <a href="/photos" class="text-accent hover:underline">← All albums</a>
+    <p class="text-accent mt-8 text-sm font-semibold tracking-widest uppercase">{dateFormat.format(new Date(album.date))}</p>
+    <h1 class="mt-3 text-4xl font-bold sm:text-5xl">{album.title}</h1>
+    <p class="mt-5 max-w-3xl text-lg">{album.description}</p>
+    <div class="mt-10 grid gap-5 sm:grid-cols-2">
+      {album.photos.map(photo => <figure><img src={photo.src} alt={photo.alt} class="w-full border object-cover" loading="lazy" />{photo.caption && <figcaption class="mt-2 text-sm text-muted">{photo.caption}</figcaption>}</figure>)}
+    </div>
+  </main>
+  <Footer />
+</Layout>
