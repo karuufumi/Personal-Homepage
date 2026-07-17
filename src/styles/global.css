@@ -40,3 +40,39 @@
 :target {
   scroll-margin-block: 1rem;
 }
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(0.45rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-exit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Smooth, lightweight navigation for Astro's client router. */
+::view-transition-old(root) {
+  animation: 140ms ease-out both page-exit;
+}
+
+::view-transition-new(root) {
+  animation: 260ms cubic-bezier(0.22, 1, 0.36, 1) both page-enter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}
