@@ -1,0 +1,1 @@
+{{ define "main" }}<main id="main-content" class="app-layout py-12"><a class="text-accent hover:underline" href="{{ "/tags/" | relURL }}">← All tags</a><h1 class="mt-6 text-3xl font-bold">#{{ .Title }}</h1><ul>{{ range .Pages }}{{ partial "post-card.html" . }}{{ end }}</ul></main>{{ end }}

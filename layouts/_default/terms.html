@@ -1,0 +1,1 @@
+{{ define "main" }}<main id="main-content" class="app-layout py-12"><h1 class="text-3xl font-bold">Tags</h1><ul class="mt-8 flex flex-wrap gap-3">{{ range .Data.Terms.Alphabetical }}<li><a class="border-border text-accent rounded border px-3 py-2 hover:underline" href="{{ .Page.RelPermalink }}">#{{ .Page.Title }} ({{ .Count }})</a></li>{{ end }}</ul></main>{{ end }}

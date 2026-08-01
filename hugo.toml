@@ -1,0 +1,20 @@
+baseURL = "https://karuuntk.com/"
+locale = "en"
+title = "Nguyễn Tiến Khang"
+enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 4
+
+[params]
+  description = "Computer Science undergraduate building reliable backend, cloud, and security-minded systems."
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  posts = "/posts/:contentbasename/"
+  projects = "/projects/:slug/"
+
+[outputFormats.RSS]
+  baseName = "rss"

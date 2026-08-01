@@ -1,0 +1,1 @@
+{{ define "main" }}<main id="main-content" class="app-layout py-12"><h1 class="text-3xl font-bold">Archives</h1>{{ range (where site.RegularPages "Section" "posts").GroupByDate "2006" }}<section class="mt-10"><h2 class="text-2xl font-semibold">{{ .Key }}</h2><ul>{{ range .Pages }}{{ partial "post-card.html" . }}{{ end }}</ul></section>{{ end }}</main>{{ end }}

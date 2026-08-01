@@ -1,0 +1,20 @@
+<a id="skip-to-content" href="#main-content" class="bg-background text-accent absolute inset-s-16 -top-full z-50 px-3 py-2 focus:top-4">Skip to content</a>
+<header class="app-layout site-header">
+  <div class="border-border bg-background relative flex w-full items-center justify-between border-b py-4 sm:py-6">
+    <a href="{{ "/" | relURL }}" class="py-1 text-xl leading-8 font-semibold sm:text-2xl">Karuu</a>
+    <nav aria-label="Primary navigation">
+      <ul class="desktop-menu">
+        {{ $current := .RelPermalink }}
+        {{ range slice (dict "label" "About" "url" "/about/") (dict "label" "Project" "url" "/projects/") (dict "label" "Blog" "url" "/posts/") (dict "label" "Photos" "url" "/photos/") (dict "label" "CV" "url" "/cv/") (dict "label" "Contact" "url" "/contact/") }}
+        <li><a href="{{ .url | relURL }}" class="{{ if hasPrefix $current .url }}active-nav{{ end }}">{{ .label }}</a></li>
+        {{ end }}
+        <li><a href="{{ "/search/" | relURL }}" aria-label="Search"><img class="site-icon" src="{{ "icons/IconSearch.svg" | relURL }}" alt="Search"></a></li>
+        <li><button id="theme-toggle" class="theme-switch" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><img class="site-icon theme-icon-dark" src="{{ "icons/IconMoon.svg" | relURL }}" alt=""><img class="site-icon theme-icon-light" src="{{ "icons/IconSunHigh.svg" | relURL }}" alt=""></button></li>
+      </ul>
+      <details class="mobile-menu"><summary aria-label="Open navigation menu"><img class="site-icon" src="{{ "icons/IconMenuDeep.svg" | relURL }}" alt=""></summary><ul>
+        {{ range slice (dict "label" "About" "url" "/about/") (dict "label" "Project" "url" "/projects/") (dict "label" "Blog" "url" "/posts/") (dict "label" "Photos" "url" "/photos/") (dict "label" "CV" "url" "/cv/") (dict "label" "Contact" "url" "/contact/") }}<li><a href="{{ .url | relURL }}">{{ .label }}</a></li>{{ end }}
+        <li><a href="{{ "/search/" | relURL }}">Search</a></li><li><button id="theme-toggle-mobile" class="theme-switch" type="button">Theme</button></li>
+      </ul></details>
+    </nav>
+  </div>
+</header>
