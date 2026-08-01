@@ -1,14 +1,12 @@
 /* Hugo site additions. The original visual tokens and utility CSS are in site.css. */
-@font-face { font-family: "Google Sans Code"; src: url("/fonts/87ca066ba5b2c7cf.woff") format("woff"); font-display: swap; font-style: normal; font-weight: 400; }
-@font-face { font-family: "Google Sans Code"; src: url("/fonts/a9a0e80c053be3d5.woff") format("woff"); font-display: swap; font-style: normal; font-weight: 500; }
-@font-face { font-family: "Google Sans Code"; src: url("/fonts/da468df88542c99b.woff") format("woff"); font-display: swap; font-style: normal; font-weight: 600; }
-@font-face { font-family: "Google Sans Code"; src: url("/fonts/f914de358bc554f6.woff") format("woff"); font-display: swap; font-style: normal; font-weight: 700; }
-:root { --font-google-sans-code: "Google Sans Code", ui-monospace, monospace; }
-/* Open the mono type slightly without making paragraphs feel loose. */
+/* The site reads with system fonts immediately; Code is only a label accent. */
+@font-face { font-family: "Google Sans Code"; src: url("/fonts/da468df88542c99b.woff") format("woff"); font-display: optional; font-style: normal; font-weight: 600; }
+:root { --font-google-sans-code: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+/* Open the system type slightly without making paragraphs feel loose. */
 body { letter-spacing: 0.012em; }
 h1 { letter-spacing: 0.045em; }
 h2 { letter-spacing: 0.025em; }
-.text-sm.uppercase { letter-spacing: 0.14em; }
+.text-sm.uppercase { font-family: "Google Sans Code", ui-monospace, monospace; font-weight: 600; letter-spacing: 0.14em; }
 .site-icon { display: block; width: 1.35rem; height: 1.35rem; stroke: currentColor; }
 .site-header { position: relative; }
 .desktop-menu { display: flex; align-items: center; gap: 1rem; list-style: none; }
