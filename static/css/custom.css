@@ -4,6 +4,11 @@
 @font-face { font-family: "Google Sans Code"; src: url("/fonts/da468df88542c99b.woff") format("woff"); font-display: swap; font-style: normal; font-weight: 600; }
 @font-face { font-family: "Google Sans Code"; src: url("/fonts/f914de358bc554f6.woff") format("woff"); font-display: swap; font-style: normal; font-weight: 700; }
 :root { --font-google-sans-code: "Google Sans Code", ui-monospace, monospace; }
+/* Open the mono type slightly without making paragraphs feel loose. */
+body { letter-spacing: 0.012em; }
+h1 { letter-spacing: 0.045em; }
+h2 { letter-spacing: 0.025em; }
+.text-sm.uppercase { letter-spacing: 0.14em; }
 .site-icon { display: block; width: 1.35rem; height: 1.35rem; stroke: currentColor; }
 .site-header { position: relative; }
 .desktop-menu { display: flex; align-items: center; gap: 1rem; list-style: none; }
