@@ -9,10 +9,10 @@ hugo server
 hugo --minify
 ```
 
-Cloudflare Pages settings:
+Cloudflare Workers build settings:
 
 - Build command: `hugo --minify --gc --baseURL "$CF_PAGES_URL"`
-- Build output directory: `public`
+- Deploy command: `npx wrangler deploy`
 - Environment variable: `HUGO_VERSION=0.164.0`
 
 Light mode is the default. The navbar theme control remembers a visitor's dark
