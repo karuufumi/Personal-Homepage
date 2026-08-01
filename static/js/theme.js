@@ -1,8 +1,11 @@
 (() => {
   const key = "theme";
   const root = document.documentElement;
-  const saved = localStorage.getItem(key);
-  root.dataset.theme = saved === "dark" ? "dark" : "light";
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+  let saved = localStorage.getItem(key);
+
+  const apply = theme => { root.dataset.theme = theme; };
+  apply(saved === "dark" || saved === "light" ? saved : (systemTheme.matches ? "dark" : "light"));
 
   const sync = () => {
     const dark = root.dataset.theme === "dark";
@@ -12,9 +15,14 @@
     });
   };
   document.querySelectorAll("[id^='theme-toggle']").forEach(button => button.addEventListener("click", () => {
-    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
-    localStorage.setItem(key, root.dataset.theme);
+    apply(root.dataset.theme === "dark" ? "light" : "dark");
+    saved = root.dataset.theme;
+    localStorage.setItem(key, saved);
     sync();
   }));
+  systemTheme.addEventListener("change", event => {
+    if (saved !== "dark" && saved !== "light") apply(event.matches ? "dark" : "light");
+    sync();
+  });
   sync();
 })();
