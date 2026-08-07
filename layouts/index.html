@@ -1,20 +1,29 @@
 {{ define "main" }}
 <main id="main-content" class="app-layout">
-  <section class="border-border border-b pt-10 pb-12 sm:pt-14 sm:pb-14">
-    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Computer Science Student</p>
+  <section class="border-border border-b pt-8 pb-8">
+    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Brief Introduction</p>
     <h1 class="my-4 text-4xl font-bold sm:my-6 sm:text-5xl">Nguyễn Tiến Khang</h1>
-    <p class="max-w-3xl text-lg">Full-stack Development · Backend Systems · Software Testing</p>
-    <p class="mt-4 max-w-3xl">I build practical web applications and backend systems, with experience in RESTful APIs, database integration, frontend workflows, and software testing.</p>
+    <p class="max-w-3xl">I build practical web applications and backend systems, with experience in RESTful APIs, database integration, frontend workflows, and software testing.</p>
+    <p class="mt-2">Explore my <a class="text-accent hover:underline" href="{{ "/projects/" | relURL }}">projects</a> or read notes on software development, backend systems, testing, and practical engineering.</p>
+    <div class="mt-5 space-y-1"><p>Email: <a class="text-accent hover:underline" href="mailto:khangtien24@gmail.com">khangtien24 [at] gmail [dot] com</a></p><p>Phone: <a class="text-accent hover:underline" href="tel:+84903049939">0903 049 939</a></p></div>
   </section>
 
   <section class="border-border border-b py-12">
-    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Profile</p>
-    <h2 class="mt-3 text-2xl font-semibold">Learning through practical software projects.</h2>
-    <div class="mt-5 max-w-3xl space-y-4">
-      <p>My work so far has focused on connecting frontend features with backend services, designing database models, and testing APIs and user workflows carefully.</p>
-      <p>As an Undergraduate Research Assistant at the Data Science Lab, I worked with FastAPI and PostgreSQL to support data-ingestion and management workflows for computer vision systems.</p>
+    <h2 class="text-2xl font-semibold">Interests</h2>
+    <div class="mt-6 grid gap-6 sm:grid-cols-3">
+      <article>
+        <h3 class="font-semibold">Full-stack development</h3>
+        <p class="mt-2">Responsive interfaces, frontend workflows, and practical backend integration.</p>
+      </article>
+      <article>
+        <h3 class="font-semibold">Backend systems</h3>
+        <p class="mt-2">RESTful APIs, database models, and clear service workflows.</p>
+      </article>
+      <article>
+        <h3 class="font-semibold">Testing and secure systems</h3>
+        <p class="mt-2">API and user-workflow testing, with a secondary interest in privacy-aware software.</p>
+      </article>
     </div>
-    <a class="text-accent mt-5 inline-block font-medium hover:underline" href="{{ "/about/" | relURL }}">More about me →</a>
   </section>
 
   <section class="border-border border-b py-12">
