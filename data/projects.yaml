@@ -21,13 +21,13 @@
 - slug: library-management-system
   title: Library Management System
   description: A university library management system for borrowing, returning, catalog search, and user management.
-  tags: [.NET, FastAPI, React, PostgreSQL, MongoDB, Docker]
+  tags: [.NET, FastAPI, React, PostgreSQL, MongoDB, Docker, Postman]
   date: Sep 2025 – Dec 2025
   status: Hybrid Project (Academic + Independent)
   progress: COMPLETE
-  problem: Library operations depend on accurate borrowing, returns, catalog search, and user records. The system groups these workflows into a maintainable application for a university-library setting.
-  features: [Layered architecture for separation of concerns, Borrowing, return, catalog-search, and user-management workflows, Frontend and API validation with Selenium and Postman]
-  learned: Layering the system made it easier to reason about each responsibility, while testing both the APIs and user workflows exposed issues that source code alone would not show.
+  problem: Developed a university library management system for borrowing, returning, catalog search, and user management through a five-sprint Scrum project.
+  features: [Simulated a real software development lifecycle through sprint planning iterative implementation testing and review, Built a small FastAPI-based API Gateway for authentication and authorization workflows using OAuth 2.0 concepts and two-factor authentication, Applied layered architecture to improve maintainability modularity and separation of concerns]
+  learned: This project gave me practice working through iterative Scrum delivery, designing an OAuth 2.0-oriented API Gateway, and separating responsibilities across the application.
 - slug: simple-noise-protocol-implementation
   title: Simple Noise Protocol Implementation
   description: A learning-oriented, simplified secure communication protocol prototype based on the Noise Protocol Framework.
@@ -48,6 +48,16 @@
   problem: Benchmark results can be difficult to interpret when they span hardware configurations and repeated experiments. This workflow processes the data and presents patterns that support comparison and reporting.
   features: [R workflow later extended into a Python data-processing pipeline, Statistical learning methods for performance comparison, Visualizations for benchmark interpretation and reporting]
   learned: I became more comfortable cleaning experimental data, comparing results carefully, and using visualizations to support a clear interpretation rather than just producing charts.
+- slug: automated-testing-ecommerce-website
+  title: Automated Testing for E-Commerce Website
+  description: An end-to-end automated testing suite for validating key e-commerce user workflows.
+  tags: [Python, Selenium, Pytest, WebDriver, HTML/CSS]
+  date: Oct 2026 – Dec 2026
+  status: Academic Project
+  progress: PLANNED
+  problem: Developed an end-to-end automated testing suite for an e-commerce website using Python and Selenium to validate key user workflows.
+  features: [Applied black-box testing techniques including Boundary Value Analysis Equivalence Partitioning Decision Table Testing and Use Case Testing, Automated product browsing search cart management checkout login and form-validation scenarios, Documented test cases expected results actual results and defect observations for structured quality assurance]
+  learned: This project focuses on translating testing techniques into repeatable browser-based checks and clear quality-assurance documentation.
 - slug: bank-account-management-system
   title: Bank Account Management System
   description: A frontend-focused banking account management system for account workflows and transaction interfaces.
