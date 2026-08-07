@@ -1,7 +1,7 @@
 - slug: intelligent-restaurant-management-system
   title: Intelligent Restaurant Management System
   description: A full-stack restaurant management platform for menu management, order processing, table workflows, and administrative operations.
-  tags: [React, TypeScript, NestJS, PostgreSQL, Docker]
+  tags: [React, TypeScript, NestJS, PostgreSQL, Docker, Apache Kafka, Kong Gateway]
   date: Jan 2026 – June 2026
   status: Academic Project
   progress: COMPLETE
