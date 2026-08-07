@@ -1,6 +1,6 @@
 ---
 title: Search
-description: Browse the site's posts.
+description: Search posts, projects, and photos.
 ---
 
-Browse all [posts](/posts/) or explore the [tag index](/tags/).
+Search posts, projects, and photos from one place.

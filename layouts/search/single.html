@@ -1,0 +1,21 @@
+{{ define "main" }}
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ $photos := site.GetPage "/photos" }}
+<main id="main-content" class="app-layout py-12">
+  <h1 class="text-3xl font-bold">Search</h1>
+  <p class="mt-3 max-w-2xl">Search posts, projects, and photos.</p>
+  <form id="site-search" class="site-search-form" role="search" novalidate>
+    <label class="sr-only" for="site-search-input">Search the site</label>
+    <input id="site-search-input" class="site-search-input" type="search" placeholder="Search posts, projects, and photos" autocomplete="off" spellcheck="false">
+    <button class="site-search-clear" type="button" aria-label="Clear search" hidden>Clear</button>
+  </form>
+  <p id="search-status" class="search-status" aria-live="polite"></p>
+  <div id="search-results" class="search-results" aria-live="polite"></div>
+</main>
+<div id="search-index" hidden>
+  {{ range $posts }}<span data-search-item data-title="{{ .Title }}" data-description="{{ .Description | default "" }}" data-url="{{ .RelPermalink }}" data-type="Blog" data-content="{{ .Plain }}" data-keywords="{{ delimit (.Params.tags | default slice) " " }}"></span>{{ end }}
+  {{ range site.Data.projects }}<span data-search-item data-title="{{ .title }}" data-description="{{ .description }}" data-url="{{ printf "/projects/%s/" .slug | relURL }}" data-type="Project" data-content="{{ printf "%s %s %s" .problem (delimit .features " ") .learned }}" data-keywords="{{ delimit .tags " " }}"></span>{{ end }}
+  {{ with $photos }}<span data-search-item data-title="{{ .Title }}" data-description="{{ .Description | default "" }}" data-url="{{ .RelPermalink }}" data-type="Photos" data-content="{{ .Plain }}" data-keywords="photography photos gallery images"></span>{{ end }}
+</div>
+<script defer src="{{ "js/search.js" | relURL }}"></script>
+{{ end }}
