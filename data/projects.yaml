@@ -23,7 +23,7 @@
   description: A university library management system for borrowing, returning, catalog search, and user management.
   tags: [.NET, FastAPI, React, PostgreSQL, MongoDB, Docker]
   date: Sep 2025 – Dec 2025
-  status: Academic Project
+  status: Hybrid Project (Academic + Independent)
   progress: COMPLETE
   problem: Library operations depend on accurate borrowing, returns, catalog search, and user records. The system groups these workflows into a maintainable application for a university-library setting.
   features: [Layered architecture for separation of concerns, Borrowing, return, catalog-search, and user-management workflows, Frontend and API validation with Selenium and Postman]
@@ -43,7 +43,7 @@
   description: A hardware benchmarking analysis workflow for processing experimental benchmark data and identifying performance patterns.
   tags: [R, Python, Pandas, NumPy, scikit-learn, Matplotlib]
   date: June 2024 – Feb 2026
-  status: Academic Project
+  status: Independent Project
   progress: COMPLETE
   problem: Benchmark results can be difficult to interpret when they span hardware configurations and repeated experiments. This workflow processes the data and presents patterns that support comparison and reporting.
   features: [R workflow later extended into a Python data-processing pipeline, Statistical learning methods for performance comparison, Visualizations for benchmark interpretation and reporting]
@@ -53,7 +53,7 @@
   description: A frontend-focused banking account management system for account workflows and transaction interfaces.
   tags: [React, TypeScript, Next.js, Tailwind CSS]
   date: Sep 2025 – Jan 2026
-  status: Academic Project
+  status: Independent Project
   progress: COMPLETE
   problem: Account and transaction interfaces need to present financial information clearly while supporting common user actions. This project focuses on the frontend workflows for those interactions.
   features: [Responsive account-overview and balance screens, Transaction-history and user-interaction flows, Backend API integration with manual testing and debugging]
