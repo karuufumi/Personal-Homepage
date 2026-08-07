@@ -3,7 +3,7 @@ title: CV
 description: Curriculum vitae of Nguyễn Tiến Khang.
 ---
 
-Computer Science student focused on full-stack development, backend systems, and software testing. [Download CV (PDF)](/MyCV_new.pdf)
+Computer Science student focused on full-stack development, backend systems, and software testing. [Download CV (PDF)](/tienkhang.pdf)
 
 ## Profile
 
