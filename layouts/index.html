@@ -5,12 +5,6 @@
     <h1 class="my-4 text-4xl font-bold sm:my-6 sm:text-5xl">Nguyễn Tiến Khang</h1>
     <p class="max-w-3xl text-lg">Full-stack Development · Backend Systems · Software Testing</p>
     <p class="mt-4 max-w-3xl">I build practical web applications and backend systems, with experience in RESTful APIs, database integration, frontend workflows, and software testing.</p>
-    <div class="mt-6 flex flex-wrap gap-3">
-      <a class="border-accent bg-accent rounded border px-4 py-2 text-sm font-medium text-white hover:opacity-90" href="{{ "/projects/" | relURL }}">View Projects</a>
-      <a class="border-border rounded border px-4 py-2 text-sm font-medium hover:text-accent" href="/MyCV_new.pdf">Download CV</a>
-      <a class="border-border rounded border px-4 py-2 text-sm font-medium hover:text-accent" href="https://github.com/karuufumi">GitHub</a>
-      <a class="border-border rounded border px-4 py-2 text-sm font-medium hover:text-accent" href="{{ "/contact/" | relURL }}">Contact Me</a>
-    </div>
   </section>
 
   <section class="border-border border-b py-12">
@@ -26,11 +20,11 @@
   <section class="border-border border-b py-12">
     <p class="text-accent text-sm font-semibold tracking-widest uppercase">Selected work</p>
     <h2 class="mt-3 text-2xl font-semibold">Featured Projects</h2>
-    <div class="mt-8 grid gap-x-10 gap-y-8 lg:grid-cols-2">{{ range hugo.Data.projects }}
-      <article>
-        <p class="text-accent text-sm font-medium">{{ .status }} · {{ .date }}</p>
-        <h3 class="mt-1 text-xl font-semibold"><a class="hover:text-accent underline decoration-dashed underline-offset-4" href="{{ printf "/projects/%s/" .slug | relURL }}">{{ .title }}</a></h3>
-        <p class="mt-3">{{ .description }}</p>
+    <div class="featured-projects">{{ range site.Data.projects }}
+      <article class="featured-project">
+        <p class="project-meta">{{ .status }} · {{ .date }}</p>
+        <h3 class="project-title"><a href="{{ printf "/projects/%s/" .slug | relURL }}">{{ .title }}</a></h3>
+        <p class="project-description">{{ .description }}</p>
         <ul class="mt-4 flex flex-wrap gap-2">{{ range .tags }}<li class="border-border rounded border px-2 py-1 text-sm">{{ . }}</li>{{ end }}</ul>
       </article>{{ end }}
     </div>

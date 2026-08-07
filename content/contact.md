@@ -15,5 +15,6 @@ I am looking for internship and entry-level opportunities in full-stack developm
 
 - [GitHub](https://github.com/karuufumi)
 - [LinkedIn](https://www.linkedin.com/in/tienkhangnguyen)
+- [LeetCode](https://leetcode.com/u/Compscicafe/)
 - [karuuntk.com](https://karuuntk.com)
 - [Download CV (PDF)](/MyCV_new.pdf)
