@@ -16,6 +16,7 @@ h2 { letter-spacing: 0.025em; }
 .site-header > div { border-bottom-color: var(--accent); }
 .experience-list,
 .skills-list { gap: 3.5rem; }
+.project-tech-stack > li { border-color: var(--accent); }
 .desktop-menu { display: flex; align-items: center; gap: 1rem; list-style: none; }
 .desktop-menu a { display: block; padding: .25rem .5rem; font-weight: 500; }
 .desktop-menu a:hover { color: var(--accent); }

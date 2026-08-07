@@ -34,7 +34,7 @@
         <p class="project-meta">{{ .status }} · {{ .date }}</p>
         <h3 class="project-title"><a href="{{ printf "/projects/%s/" .slug | relURL }}">{{ .title }}</a></h3>
         <p class="project-description">{{ .description }}</p>
-        <ul class="mt-4 flex flex-wrap gap-2">{{ range .tags }}<li class="border-border rounded border px-2 py-1 text-sm">{{ . }}</li>{{ end }}</ul>
+        <ul class="project-tech-stack mt-4 flex flex-wrap gap-2">{{ range .tags }}<li class="border-border rounded border px-2 py-1 text-sm">{{ . }}</li>{{ end }}</ul>
       </article>{{ end }}
     </div>
     <a class="text-accent mt-8 inline-block font-medium hover:underline" href="{{ "/projects/" | relURL }}">View all project details →</a>
