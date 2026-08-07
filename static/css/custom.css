@@ -14,6 +14,9 @@ h2 { letter-spacing: 0.025em; }
 [data-theme="dark"] .site-icon { filter: invert(1); }
 .site-header { position: relative; }
 .site-header > div { border-bottom-color: var(--accent); }
+.border-b.border-border,
+.border-t.border-border,
+.app-prose hr { border-color: var(--accent) !important; }
 .experience-list,
 .skills-list { gap: 3.5rem; }
 .project-tech-stack > li { border-color: var(--accent) !important; }
@@ -33,8 +36,8 @@ h2 { letter-spacing: 0.025em; }
 @media (max-width: 639px) { .desktop-menu { display: none; } .mobile-menu { display: block; } }
 
 /* Give the home-page project list the cadence of a project index, not a dense tag list. */
-.featured-projects { display: grid; margin-top: 2.75rem; border-top: 1px solid var(--border); }
-.featured-project { padding-block: 2.5rem; border-bottom: 1px solid var(--border); }
+.featured-projects { display: grid; margin-top: 2.75rem; border-top: 1px solid var(--accent); }
+.featured-project { padding-block: 2.5rem; border-bottom: 1px solid var(--accent); }
 .project-meta { color: var(--muted-foreground); font-size: .8125rem; font-weight: 600; letter-spacing: .025em; }
 .project-title { margin-top: .65rem; font-size: 1.35rem; font-weight: 600; line-height: 1.3; }
 .project-title a { text-decoration: none; text-decoration-thickness: 1px; text-underline-offset: .22em; }
