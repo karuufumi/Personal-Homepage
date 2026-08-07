@@ -1,8 +1,8 @@
 ---
 title: Photos
-description: A chronological collection of photography by Nguyễn Tiến Khang.
+description: Snapshots of my life, memories frozen in time.
 ---
 
-## The archive is beginning
+## Snapshots of my life, memories frozen in time.
 
-Photo albums will appear here in chronological order, each with its own description and gallery.
+Will be updated later :>
