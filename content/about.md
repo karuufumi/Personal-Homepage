@@ -1,56 +1,61 @@
 ---
 title: "About Nguyễn Tiến Khang"
-description: "A Computer Science undergraduate focused on reliable backend, cloud, and security-minded systems."
+description: "Computer Science student focused on full-stack development, backend systems, and software testing."
 ---
 
-I am a Computer Science undergraduate based in An Nhon, Ho Chi Minh City, Vietnam. I focus on backend and cloud systems that are clear to run, test, and change.
+I am Khang, a Computer Science student at Ho Chi Minh City University of Technology, VNU-HCM. My main focus is full-stack development, backend systems, and software testing.
 
-I care about making constraints visible: in an API contract, a deployment, or the way a system fails. My current work covers Java, Go, PostgreSQL, Docker, message-based systems, CI/CD, and practical observability.
+I have worked on academic and independent projects using React, TypeScript, NestJS, FastAPI, PostgreSQL, MongoDB, Docker, Postman, and Selenium. Most of my experience so far has been around building RESTful APIs, designing database models, connecting frontend features with backend services, and testing APIs or user workflows to make sure the system behaves as expected.
 
-## What I build
+As an Undergraduate Research Assistant at the Data Science Lab, I worked with FastAPI and PostgreSQL to support data-ingestion and management workflows for computer vision systems. That experience helped me understand backend development in a more realistic setting, where the code has to support an actual technical workflow instead of only passing a classroom requirement.
 
-- **Backend workflows** with explicit service boundaries and durable failure handling.
-- **Cloud and delivery systems** with repeatable deployment paths and useful operational signals.
-- **Security-minded tools** for container sandboxing, restricted runtimes, and observable behavior.
+My projects include a restaurant management system, a mobile museum companion application, a university library management system, and a simplified secure communication protocol based on the Noise Protocol Framework. They have helped me get more comfortable structuring applications, debugging problems, working with databases, and thinking through how different parts of a system connect.
 
-## Interests
+I am still early in my professional career, but I take software engineering seriously. I am looking for opportunities in full-stack development, backend engineering, or software testing where I can keep learning, work with real engineering practices, and contribute to useful, well-built software.
 
-### Reliable backend and distributed systems
+## Experience
 
-I am interested in the engineering decisions that make a backend system dependable after it leaves the happy path: clear API contracts, durable state, idempotent operations, and deliberate recovery from partial failure. Event-driven workflows and saga-style coordination are especially compelling because they make those trade-offs visible across service boundaries rather than hiding them inside a single transaction.
+### Undergraduate Research Assistant
 
-### Cloud delivery and operational clarity
+**Data Science Lab, HCMC University of Technology**
 
-I enjoy turning an application into something that can be built, deployed, and operated with confidence. This includes containerized environments, CI/CD workflows, environment-specific configuration, health checks, and concise deployment documentation. I value observability as a practical feedback loop: metrics, logs, and traces should help someone understand what happened and what to inspect next.
+Ho Chi Minh City, Vietnam · September 2024 – February 2025
 
-### Security at runtime
+- Implemented and trained convolutional neural network models for object detection in surveillance camera scenarios.
+- Worked with FastAPI and PostgreSQL to support data-ingestion and management workflows for computer vision systems.
 
-My security interests focus on practical runtime boundaries for containerized software. I am drawn to sandboxing, restricted permissions, filesystem and network controls, and the evidence needed to show that those controls are actually working. The goal is not security theatre; it is making safe behavior easier to reproduce, test, and reason about.
+### Independent Software Developer
 
-### Applied systems research
+**Independent**
 
-I am also interested in system projects that can be evaluated honestly through observable behavior. A useful project should make its architecture, constraints, failure modes, and outcomes concrete enough to discuss and measure. That perspective guides my thesis work and the technical notes I write alongside my projects.
+Ho Chi Minh City, Vietnam · January 2025 – Present
 
-## Working principles
+- Contributed to open-source repositories through code reviews, issue triaging, and technical discussions on GitHub.
+- Explored independent projects involving web applications, backend systems, testing workflows, and privacy-aware systems.
 
-I start by clarifying the system boundary, risks, outcomes, and constraints. Then I model data, contracts, and failure paths before implementing focused components and testing critical behavior. The goal is to leave a system easier to operate and change than before.
+## Skills
+
+**Languages:** Python, C/C++, JavaScript, TypeScript, Swift, SQL, R, HTML/CSS
+
+**Frameworks and libraries:** React, Next.js, Node.js, Express.js, NestJS, FastAPI, .NET, Tailwind CSS, PyTorch, NumPy, Pandas, Matplotlib, scikit-learn
+
+**Databases:** PostgreSQL, MySQL, MongoDB, ChromaDB
+
+**Tools:** Git, Docker, Postman, Selenium, Railway, Render, AWS, Firebase, Azure, Jira, GitHub, GitLab, Figma, Google Colab, Apache Kafka, LangChain, Antigravity
 
 ## Education
 
-**Bachelor of Engineering in Computer Science**  
-Ho Chi Minh City University of Technology, VNU-HCM · Ho Chi Minh City, Vietnam  
-October 2022 – Present
+**Bachelor of Science in Computer Science**
+
+Ho Chi Minh City University of Technology, VNU-HCM · October 2022 – Present
 
 - GPA: 3.2/4.0 (8.1/10)
-- Relevant coursework: Data Structures, Computer Architecture, Database Systems, Software Engineering, Operating Systems, and Programming Languages
+- OISP Scholarship, Semester 242
+- Relevant coursework: Data Structures and Algorithms, Computer Network, Mobile Application Development, Discrete Mathematics, Database Systems, Software Engineering, Operating Systems, and Software Architecture
 
 ## Certifications
 
-- **AWS Certified Solutions Architect – Associate** — Amazon Web Services, July 2026
 - **IELTS 7.0** — IDP Vietnam, May 2022
-
-## Awards
-
-- **OISP Scholarship** — Semester 242, VNU-HCM University of Technology
+- **SQL Associate Certificate** — DataCamp, August 2026
 
 You can find my work on [GitHub](https://github.com/karuufumi) or connect with me on [LinkedIn](https://www.linkedin.com/in/tienkhangnguyen).

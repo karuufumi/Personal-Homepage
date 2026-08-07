@@ -7,7 +7,7 @@ enableRobotsTXT = true
   pagerSize = 4
 
 [params]
-  description = "Computer Science undergraduate building reliable backend, cloud, and security-minded systems."
+  description = "Computer Science student focused on full-stack development, backend systems, and software testing."
 
 [taxonomies]
   tag = "tags"

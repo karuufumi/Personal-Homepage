@@ -1,8 +1,71 @@
 {{ define "main" }}
 <main id="main-content" class="app-layout">
-  <section class="border-border border-b pt-8 pb-8"><p class="text-accent text-sm font-semibold tracking-widest uppercase">Brief introduction</p><h1 class="my-4 text-4xl font-bold sm:my-6 sm:text-5xl">Nguyễn Tiến Khang</h1><p class="max-w-3xl">Computer Science undergraduate based in An Nhon, Ho Chi Minh City. I build reliable APIs, delivery workflows, and security-minded tools with clear architecture and observable behavior.</p><p class="mt-2">Explore my <a class="text-accent hover:underline" href="{{ "/projects/" | relURL }}">projects</a> or read notes on systems, cloud, security, and applied engineering.</p><div class="mt-5 space-y-1"><p>Email: <a class="text-accent hover:underline" href="mailto:khangtien24@gmail.com">khangtien24 [at] gmail [dot] com</a></p><p>Phone: <a class="text-accent hover:underline" href="tel:+84903049939">0903 049 939</a></p></div></section>
-  <section class="border-border border-b py-12"><h2 class="text-2xl font-semibold">Interests</h2><div class="mt-6 grid gap-6 sm:grid-cols-3"><article><h3 class="font-semibold">Backend systems</h3><p class="mt-2">APIs, service boundaries, data flows, and durable workflows.</p></article><article><h3 class="font-semibold">Cloud and delivery</h3><p class="mt-2">Containers, CI/CD, deployments, and operational visibility.</p></article><article><h3 class="font-semibold">Security and reliability</h3><p class="mt-2">Restricted runtimes, observable behavior, and practical safeguards.</p></article></div></section>
-  <section class="border-border border-b py-12"><h2 class="text-2xl font-semibold">Featured Projects</h2><div class="mt-6 space-y-6">{{ range first 2 site.Data.projects }}<article><p class="text-accent text-sm font-medium">{{ .status }} · {{ .progress }}</p><h3 class="mt-1 text-lg font-medium"><a class="text-accent hover:underline" href="{{ printf "/projects/%s/" .slug | relURL }}">{{ .title }}</a></h3><p>{{ .description }}</p></article>{{ end }}</div></section>
-  <section class="pt-12 pb-6"><h2 class="text-2xl font-semibold">Recent Posts</h2><ul>{{ range first 4 (where site.RegularPages "Section" "posts") }}{{ partial "post-card.html" . }}{{ end }}</ul></section>
+  <section class="border-border border-b pt-10 pb-12 sm:pt-14 sm:pb-14">
+    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Computer Science Student</p>
+    <h1 class="my-4 text-4xl font-bold sm:my-6 sm:text-5xl">Nguyễn Tiến Khang</h1>
+    <p class="max-w-3xl text-lg">Full-stack Development · Backend Systems · Software Testing</p>
+    <p class="mt-4 max-w-3xl">I build practical web applications and backend systems, with experience in RESTful APIs, database integration, frontend workflows, and software testing.</p>
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a class="border-accent bg-accent rounded border px-4 py-2 text-sm font-medium text-white hover:opacity-90" href="{{ "/projects/" | relURL }}">View Projects</a>
+      <a class="border-border rounded border px-4 py-2 text-sm font-medium hover:text-accent" href="/MyCV_new.pdf">Download CV</a>
+      <a class="border-border rounded border px-4 py-2 text-sm font-medium hover:text-accent" href="https://github.com/karuufumi">GitHub</a>
+      <a class="border-border rounded border px-4 py-2 text-sm font-medium hover:text-accent" href="{{ "/contact/" | relURL }}">Contact Me</a>
+    </div>
+  </section>
+
+  <section class="border-border border-b py-12">
+    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Profile</p>
+    <h2 class="mt-3 text-2xl font-semibold">Learning through practical software projects.</h2>
+    <div class="mt-5 max-w-3xl space-y-4">
+      <p>My work so far has focused on connecting frontend features with backend services, designing database models, and testing APIs and user workflows carefully.</p>
+      <p>As an Undergraduate Research Assistant at the Data Science Lab, I worked with FastAPI and PostgreSQL to support data-ingestion and management workflows for computer vision systems.</p>
+    </div>
+    <a class="text-accent mt-5 inline-block font-medium hover:underline" href="{{ "/about/" | relURL }}">More about me →</a>
+  </section>
+
+  <section class="border-border border-b py-12">
+    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Selected work</p>
+    <h2 class="mt-3 text-2xl font-semibold">Featured Projects</h2>
+    <div class="mt-8 grid gap-x-10 gap-y-8 lg:grid-cols-2">{{ range hugo.Data.projects }}
+      <article>
+        <p class="text-accent text-sm font-medium">{{ .status }} · {{ .date }}</p>
+        <h3 class="mt-1 text-xl font-semibold"><a class="hover:text-accent underline decoration-dashed underline-offset-4" href="{{ printf "/projects/%s/" .slug | relURL }}">{{ .title }}</a></h3>
+        <p class="mt-3">{{ .description }}</p>
+        <ul class="mt-4 flex flex-wrap gap-2">{{ range .tags }}<li class="border-border rounded border px-2 py-1 text-sm">{{ . }}</li>{{ end }}</ul>
+      </article>{{ end }}
+    </div>
+    <a class="text-accent mt-8 inline-block font-medium hover:underline" href="{{ "/projects/" | relURL }}">View all project details →</a>
+  </section>
+
+  <section class="border-border border-b py-12">
+    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Experience</p>
+    <div class="mt-6 grid gap-8 lg:grid-cols-2">
+      <article><h2 class="text-xl font-semibold">Undergraduate Research Assistant</h2><p class="mt-1 text-sm">Data Science Lab, HCMC University of Technology · Sep 2024 – Feb 2025</p><p class="mt-3">Implemented and trained convolutional neural network models for object detection in surveillance camera scenarios, and supported data-ingestion and management workflows with FastAPI and PostgreSQL.</p></article>
+      <article><h2 class="text-xl font-semibold">Independent Software Developer</h2><p class="mt-1 text-sm">Independent · Jan 2025 – Present</p><p class="mt-3">Contributed to open-source work through reviews, issue triaging, and technical discussions while exploring web, backend, testing, and privacy-aware projects.</p></article>
+    </div>
+  </section>
+
+  <section class="border-border border-b py-12">
+    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Skills</p>
+    <div class="mt-6 grid gap-8 lg:grid-cols-2">
+      <article><h2 class="text-xl font-semibold">Core focus</h2><p class="mt-3">React, TypeScript, NestJS, FastAPI, PostgreSQL, MongoDB, Docker, Postman, Selenium, and Git.</p></article>
+      <article><h2 class="text-xl font-semibold">Additional tools</h2><p class="mt-3">Next.js, Node.js, Express.js, .NET, Swift, Tailwind CSS, MySQL, ChromaDB, Python, R, PyTorch, Pandas, NumPy, Matplotlib, and scikit-learn.</p></article>
+    </div>
+    <a class="text-accent mt-5 inline-block font-medium hover:underline" href="{{ "/about/" | relURL }}#skills">View all skills →</a>
+  </section>
+
+  <section class="border-border border-b py-12">
+    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Education</p>
+    <h2 class="mt-3 text-2xl font-semibold">Ho Chi Minh City University of Technology, VNU-HCM</h2>
+    <p class="mt-2">Bachelor of Science in Computer Science · October 2022 – Present</p>
+    <p class="mt-2">GPA: 3.2/4.0 (8.1/10) · OISP Scholarship, Semester 242</p>
+  </section>
+
+  <section class="py-12">
+    <p class="text-accent text-sm font-semibold tracking-widest uppercase">Contact</p>
+    <h2 class="mt-3 text-2xl font-semibold">Let’s get in touch.</h2>
+    <p class="mt-3 max-w-2xl">I am looking for internship and entry-level opportunities in full-stack development, backend engineering, and software testing.</p>
+    <a class="text-accent mt-5 inline-block font-medium hover:underline" href="{{ "/contact/" | relURL }}">Contact details →</a>
+  </section>
 </main>
 {{ end }}

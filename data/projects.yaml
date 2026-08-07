@@ -1,27 +1,60 @@
-- slug: container-security-sandbox
-  title: Container Security Testing Sandbox
-  description: A sandboxed testing platform for evaluating containerized applications under restricted runtime policies.
-  tags: [Go, Docker, Security, Runtime, Testing]
-  status: Current build
-  progress: IN PROGRESS
-  problem: Testing container behavior safely often means choosing between broad permissions and shallow results. This project creates a repeatable, restricted environment for observing runtime behavior without weakening the host.
-  features: [Policy-driven container profiles, Isolated runtime test suites, Structured event capture and reports, Repeatable local developer workflow]
-  learned: Security tooling is most useful when the safe path is also the easy path. Clear policy boundaries and observable execution make the system practical to use.
-- slug: orion-observability
-  title: Orion Observability Platform
-  description: A real-time observability and anomaly investigation platform for service metrics and alerts.
-  tags: [Go, TypeScript, Metrics, Observability]
-  status: System build
+- slug: intelligent-restaurant-management-system
+  title: Intelligent Restaurant Management System
+  description: A full-stack restaurant management platform for menu management, order processing, table workflows, and administrative operations.
+  tags: [React, TypeScript, NestJS, PostgreSQL, Docker]
+  date: Jan 2026 – June 2026
+  status: Academic Project
   progress: COMPLETE
-  problem: Metrics only help when teams can connect a signal to a service, event, and useful next action. Orion turns scattered telemetry into an investigation surface.
-  features: [Live metric ingestion pipeline, Alert correlation and investigation views, Service health timelines, Focused dashboard workflows]
-  learned: Observability UI needs a strong information hierarchy. The product should reduce uncertainty, not simply expose more numbers.
-- slug: distributed-order-fulfillment
-  title: Distributed Order Fulfillment Platform
-  description: A saga-based transaction orchestration platform for resilient order fulfillment workflows.
-  tags: [Java, Go, RabbitMQ, PostgreSQL, Saga Pattern]
-  status: Thesis track
+  problem: Restaurant operations involve connected menu, order, table, and administrative workflows. This project brings those workflows together in one application for staff and customer-facing use.
+  features: [Backend APIs and database models for restaurant workflows, Order and table-status management, Responsive interfaces for restaurant data and operations]
+  learned: Building this project helped me connect frontend features with backend APIs and database design while keeping the day-to-day workflow clear.
+- slug: mobile-museum-companion
+  title: Mobile Museum Companion
+  description: A mobile museum companion application for artwork discovery, guided tours, saved items, and museum navigation support.
+  tags: [SwiftUI, NestJS, PostgreSQL, ChromaDB]
+  date: Feb 2026 – May 2026
+  status: Academic Project
+  progress: COMPLETE
+  problem: Museum visitors need an accessible way to discover artworks, follow tours, save items, and find their way through a visit. The application supports these connected activities in a mobile experience.
+  features: [Mobile screens and authentication flows, Backend APIs for artwork and tour management, Semantic search and AI-assisted recommendations using vector database workflows]
+  learned: This project gave me practice integrating mobile screens, authentication, APIs, and database-backed search without treating the recommendation features as a black box.
+- slug: library-management-system
+  title: Library Management System
+  description: A university library management system for borrowing, returning, catalog search, and user management.
+  tags: [.NET, FastAPI, React, PostgreSQL, MongoDB, Docker]
+  date: Sep 2025 – Dec 2025
+  status: Academic Project
+  progress: COMPLETE
+  problem: Library operations depend on accurate borrowing, returns, catalog search, and user records. The system groups these workflows into a maintainable application for a university-library setting.
+  features: [Layered architecture for separation of concerns, Borrowing, return, catalog-search, and user-management workflows, Frontend and API validation with Selenium and Postman]
+  learned: Layering the system made it easier to reason about each responsibility, while testing both the APIs and user workflows exposed issues that source code alone would not show.
+- slug: simple-noise-protocol-implementation
+  title: Simple Noise Protocol Implementation
+  description: A learning-oriented, simplified secure communication protocol prototype based on the Noise Protocol Framework.
+  tags: [Python, WebSocket, POSIX]
+  date: Apr 2026 – Present
+  status: Independent Project
   progress: IN PROGRESS
-  problem: Order fulfillment spans inventory, payments, and shipping systems that cannot share one transaction. The platform coordinates each durable step and handles failures explicitly.
-  features: [Saga orchestration flow, Event-driven service boundaries, Compensating transaction support, Durable workflow state]
-  learned: Distributed transactions demand deliberate failure design. Treating recovery as a first-class workflow makes the architecture easier to reason about.
+  problem: Secure communication protocols have several connected steps that are easier to understand by implementing and testing a small, focused prototype. This project explores those steps without presenting itself as production cryptography.
+  features: [Handshake logic and key agreement, Encryption and authenticated message exchange, WebSocket-based communication flow]
+  learned: The work has helped me think more carefully about message order, key material, and the boundaries between a protocol design and a safe production implementation.
+- slug: computer-hardware-benchmarking
+  title: Computer Hardware Benchmarking using Statistical Learning Approaches
+  description: A hardware benchmarking analysis workflow for processing experimental benchmark data and identifying performance patterns.
+  tags: [R, Python, Pandas, NumPy, scikit-learn, Matplotlib]
+  date: June 2024 – Feb 2026
+  status: Academic Project
+  progress: COMPLETE
+  problem: Benchmark results can be difficult to interpret when they span hardware configurations and repeated experiments. This workflow processes the data and presents patterns that support comparison and reporting.
+  features: [R workflow later extended into a Python data-processing pipeline, Statistical learning methods for performance comparison, Visualizations for benchmark interpretation and reporting]
+  learned: I became more comfortable cleaning experimental data, comparing results carefully, and using visualizations to support a clear interpretation rather than just producing charts.
+- slug: bank-account-management-system
+  title: Bank Account Management System
+  description: A frontend-focused banking account management system for account workflows and transaction interfaces.
+  tags: [React, TypeScript, Next.js, Tailwind CSS]
+  date: Sep 2025 – Jan 2026
+  status: Academic Project
+  progress: COMPLETE
+  problem: Account and transaction interfaces need to present financial information clearly while supporting common user actions. This project focuses on the frontend workflows for those interactions.
+  features: [Responsive account-overview and balance screens, Transaction-history and user-interaction flows, Backend API integration with manual testing and debugging]
+  learned: The project strengthened my frontend implementation and debugging habits, especially when checking whether the interface behaved correctly with real API responses.

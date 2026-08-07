@@ -3,19 +3,32 @@ title: CV
 description: Curriculum vitae of Nguyễn Tiến Khang.
 ---
 
-Computer Science undergraduate focused on backend, cloud, and reliable systems. [Download CV (PDF)](/MyCV_new.pdf)
+Computer Science student focused on full-stack development, backend systems, and software testing. [Download CV (PDF)](/MyCV_new.pdf)
 
 ## Profile
 
-I build backend and cloud systems that are clear to run, test, and change. My interests include reliable service workflows, containerized delivery, observability, and practical runtime security.
+I build practical web applications and backend systems, with experience in RESTful APIs, database integration, frontend workflows, and software testing.
 
 ## Education
 
-**Bachelor of Engineering in Computer Science**  
+**Bachelor of Science in Computer Science**
+
 Ho Chi Minh City University of Technology, VNU-HCM · October 2022 – Present
+
+- GPA: 3.2/4.0 (8.1/10)
+- OISP Scholarship, Semester 242
 
 ## Skills
 
-**Languages:** Python, C/C++, JavaScript, TypeScript, Swift, Kotlin, SQL, HTML/CSS  
-**Frameworks:** React, Node.js, Express.js, .NET, FastAPI, Spring Boot, PyTorch  
-**Tools:** Git, Docker, AWS, Azure, Railway, Render, Apache Kafka
+**Languages:** Python, C/C++, JavaScript, TypeScript, Swift, SQL, R, HTML/CSS
+
+**Frameworks and libraries:** React, Next.js, Node.js, Express.js, NestJS, FastAPI, .NET, Tailwind CSS, PyTorch, NumPy, Pandas, Matplotlib, scikit-learn
+
+**Databases:** PostgreSQL, MySQL, MongoDB, ChromaDB
+
+**Tools:** Git, Docker, Postman, Selenium, Railway, Render, AWS, Firebase, Azure, Jira, GitHub, GitLab, Figma, Google Colab, Apache Kafka, LangChain, Antigravity
+
+## Certifications
+
+- IELTS 7.0 — IDP Vietnam, May 2022
+- SQL Associate Certificate — DataCamp, August 2026
