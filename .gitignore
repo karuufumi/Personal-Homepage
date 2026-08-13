@@ -9,3 +9,5 @@ public/
 # Editor and OS files
 .DS_Store
 .idea/
+
+AGENTS.md

@@ -1,6 +1,6 @@
 {
   "recommendations": [
-    "astro-build.astro-vscode",
+    "budparr.language-hugo-vscode",
     "esbenp.prettier-vscode",
     "bradlc.vscode-tailwindcss",
     "dbaeumer.vscode-eslint"
