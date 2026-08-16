@@ -29,10 +29,10 @@
           <button type="button" role="option" aria-selected="false" data-filter-option data-value="planned">Planned</button>
         </div>
       </div>
-      <div class="project-filter-field" data-filter-control data-filter-key="technology" data-value="all">
+      <div class="project-filter-field" data-filter-control data-filter-key="technology" data-value="all" data-multi="true">
         <span class="project-filter-label">Technology</span>
         <button type="button" class="project-filter-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="project-technology-options"><span data-filter-label>All technologies</span><span class="project-filter-chevron" aria-hidden="true">⌄</span></button>
-        <div class="project-filter-menu" id="project-technology-options" role="listbox" aria-label="Technology options" hidden>
+        <div class="project-filter-menu" id="project-technology-options" role="listbox" aria-label="Technology options. Select one or more." aria-multiselectable="true" hidden>
           <button type="button" role="option" aria-selected="true" data-filter-option data-value="all">All technologies</button>
           {{ range $technologies }}<button type="button" role="option" aria-selected="false" data-filter-option data-value="{{ . | lower }}">{{ . }}</button>{{ end }}
         </div>
