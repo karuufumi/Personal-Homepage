@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Karuu">
-  <rect width="64" height="64" rx="14" fill="#26428b"/>
-  <path fill="#fffdf8" d="M17 13h10v15.2L40.2 13H53L36.1 31.4 53.7 51H40.5L27 35.3V51H17z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TK">
+  <rect width="64" height="64" rx="14" fill="#202839"/>
+  <path fill="#65e6a1" d="M10 15h26v8H27v26h-9V23H10zM38 15h9v12l8-12h10L52 31l13 18H54L47 38v11h-9z"/>
 </svg>
