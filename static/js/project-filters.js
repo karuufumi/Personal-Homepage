@@ -20,7 +20,7 @@ if (projectList) {
 
   const matches = (card, control) => {
     if (control.dataset.filterKey === "technology") {
-      const selected = selectedTechnologyOptions(control).map((option) => option.dataset.value);
+      const selected = (control.dataset.selected || "").split("|").filter(Boolean);
       return selected.length === 0 || selected.some((technology) => card.dataset.technologies.split("|").includes(technology));
     }
     return control.dataset.value === "all" || card.dataset[control.dataset.filterKey] === control.dataset.value;
@@ -53,6 +53,7 @@ if (projectList) {
 
     const updateMultiLabel = () => {
       const selected = selectedTechnologyOptions(control);
+      control.dataset.selected = selected.map((option) => option.dataset.value).join("|");
       control.dataset.value = selected.length ? selected.map((option) => option.dataset.value).join("|") : "all";
       label.textContent = selected.length === 0
         ? "All technologies"
@@ -144,6 +145,7 @@ if (projectList) {
     controls.forEach((control) => {
       const option = control.querySelector('[data-filter-option][data-value="all"]');
       control.dataset.value = "all";
+      control.dataset.selected = "";
       control.querySelector("[data-filter-label]").textContent = option.textContent;
       control.querySelectorAll("[data-filter-option]").forEach((item) => item.setAttribute("aria-selected", String(item === option)));
     });
