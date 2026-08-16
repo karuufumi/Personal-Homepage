@@ -7,7 +7,7 @@ I am looking for internship and entry-level opportunities in full-stack developm
 
 ## Contact details
 
-- Email: [khangtien24@gmail.com](mailto:khangtien24@gmail.com)
+- Email: [khang.nt.cswork@gmail.com](mailto:khang.nt.cswork@gmail.com)
 - Phone: [0903049939](tel:+84903049939)
 - Location: Ho Chi Minh City, Vietnam
 
