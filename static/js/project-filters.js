@@ -21,7 +21,8 @@ if (projectList) {
   const matches = (card, control) => {
     if (control.dataset.filterKey === "technology") {
       const selected = (control.dataset.selected || "").split("|").filter(Boolean);
-      return selected.length === 0 || selected.some((technology) => card.dataset.technologies.split("|").includes(technology));
+      const projectTechnologies = card.dataset.technologies.split("|");
+      return selected.length === 0 || selected.every((technology) => projectTechnologies.includes(technology));
     }
     return control.dataset.value === "all" || card.dataset[control.dataset.filterKey] === control.dataset.value;
   };
@@ -57,7 +58,7 @@ if (projectList) {
       control.dataset.value = selected.length ? selected.map((option) => option.dataset.value).join("|") : "all";
       label.textContent = selected.length === 0
         ? "All technologies"
-        : selected.length === 1 ? selected[0].textContent : `${selected.length} technologies selected`;
+        : selected.length === 1 ? selected[0].textContent : `${selected.length} technologies`;
     };
 
     const selectOption = (option) => {
