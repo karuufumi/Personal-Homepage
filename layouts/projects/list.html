@@ -19,41 +19,49 @@
       <button type="button" class="project-filter-reset" data-project-reset disabled>Clear filters</button>
     </div>
     <div class="project-filter-grid">
-      <label>Status
-        <select data-project-filter="progress">
-          <option value="all">All statuses</option>
-          <option value="complete">Complete</option>
-          <option value="in progress">In progress</option>
-          <option value="planned">Planned</option>
-        </select>
-      </label>
-      <label>Technology
-        <select data-project-filter="technology">
-          <option value="all">All technologies</option>
-          {{ range $technologies }}<option value="{{ . | lower }}">{{ . }}</option>{{ end }}
-        </select>
-      </label>
-      <label>Project type
-        <select data-project-filter="type">
-          <option value="all">All types</option>
-          {{ range $types }}<option value="{{ . | lower }}">{{ . }}</option>{{ end }}
-        </select>
-      </label>
-      <label>Year
-        <select data-project-filter="year">
-          <option value="all">All years</option>
-          <option value="2024">2024</option>
-          <option value="2025">2025</option>
-          <option value="2026">2026</option>
-        </select>
-      </label>
+      <div class="project-filter-field" data-filter-control data-filter-key="progress" data-value="all">
+        <span class="project-filter-label">Status</span>
+        <button type="button" class="project-filter-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="project-status-options"><span data-filter-label>All statuses</span><span class="project-filter-chevron" aria-hidden="true">⌄</span></button>
+        <div class="project-filter-menu" id="project-status-options" role="listbox" aria-label="Status options" hidden>
+          <button type="button" role="option" aria-selected="true" data-filter-option data-value="all">All statuses</button>
+          <button type="button" role="option" aria-selected="false" data-filter-option data-value="complete">Complete</button>
+          <button type="button" role="option" aria-selected="false" data-filter-option data-value="in progress">In progress</button>
+          <button type="button" role="option" aria-selected="false" data-filter-option data-value="planned">Planned</button>
+        </div>
+      </div>
+      <div class="project-filter-field" data-filter-control data-filter-key="technology" data-value="all">
+        <span class="project-filter-label">Technology</span>
+        <button type="button" class="project-filter-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="project-technology-options"><span data-filter-label>All technologies</span><span class="project-filter-chevron" aria-hidden="true">⌄</span></button>
+        <div class="project-filter-menu" id="project-technology-options" role="listbox" aria-label="Technology options" hidden>
+          <button type="button" role="option" aria-selected="true" data-filter-option data-value="all">All technologies</button>
+          {{ range $technologies }}<button type="button" role="option" aria-selected="false" data-filter-option data-value="{{ . | lower }}">{{ . }}</button>{{ end }}
+        </div>
+      </div>
+      <div class="project-filter-field" data-filter-control data-filter-key="type" data-value="all">
+        <span class="project-filter-label">Project type</span>
+        <button type="button" class="project-filter-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="project-type-options"><span data-filter-label>All types</span><span class="project-filter-chevron" aria-hidden="true">⌄</span></button>
+        <div class="project-filter-menu" id="project-type-options" role="listbox" aria-label="Project type options" hidden>
+          <button type="button" role="option" aria-selected="true" data-filter-option data-value="all">All types</button>
+          {{ range $types }}<button type="button" role="option" aria-selected="false" data-filter-option data-value="{{ . | lower }}">{{ . }}</button>{{ end }}
+        </div>
+      </div>
+      <div class="project-filter-field" data-filter-control data-filter-key="year" data-value="all">
+        <span class="project-filter-label">Year</span>
+        <button type="button" class="project-filter-trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="project-year-options"><span data-filter-label>All years</span><span class="project-filter-chevron" aria-hidden="true">⌄</span></button>
+        <div class="project-filter-menu" id="project-year-options" role="listbox" aria-label="Year options" hidden>
+          <button type="button" role="option" aria-selected="true" data-filter-option data-value="all">All years</button>
+          <button type="button" role="option" aria-selected="false" data-filter-option data-value="2024">2024</button>
+          <button type="button" role="option" aria-selected="false" data-filter-option data-value="2025">2025</button>
+          <button type="button" role="option" aria-selected="false" data-filter-option data-value="2026">2026</button>
+        </div>
+      </div>
     </div>
     <p class="project-filter-results" data-project-results role="status" aria-live="polite"></p>
   </section>
 
   <div class="project-list" data-project-list>
     {{ range $projects }}
-    <article class="border-border border-b pb-10" data-project-card data-progress="{{ .progress | lower }}" data-technologies="{{ delimit .tags "|" | lower }}" data-type="{{ .status | lower }}" data-years="{{ delimit (findRE "[0-9]{4}" .date) "|" }}">
+    <article class="border-border border-b pb-10" data-project-card data-progress="{{ .progress | lower }}" data-technologies="{{ delimit .tags "|" | lower }}" data-type="{{ .status | lower }}" data-year="{{ index (findRE "[0-9]{4}" .date) 0 }}">
       <p class="text-accent text-sm font-medium">{{ .status }} · {{ .date }}</p>
       <h2 class="mt-2 text-2xl font-semibold"><a class="hover:text-accent underline decoration-dashed underline-offset-4" href="{{ printf "/projects/%s/" .slug | relURL }}">{{ .title }}</a></h2>
       <p class="mt-3 max-w-3xl">{{ .description }}</p>
