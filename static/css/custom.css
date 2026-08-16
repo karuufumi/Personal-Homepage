@@ -79,11 +79,11 @@ h2 { letter-spacing: 0.025em; }
 .contact-page ul { margin-top: .7em !important; margin-bottom: .7em !important; }
 .contact-page .contact-form-section { margin-top: 2rem; padding-block: 2.5rem; }
 .contact-form-heading { max-width: 42rem; }
-.contact-form-heading h2 { margin-top: .75rem; font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; }
+.contact-form-heading h2 { margin-top: .75rem; margin-bottom: 0 !important; font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 700; }
 .contact-form-heading p:last-child { margin-top: .75rem; color: var(--muted-foreground); }
-.contact-form { display: grid; gap: 1.25rem; margin-top: 2rem; }
-.contact-form-fields { display: grid; gap: 1.25rem; }
-.contact-form label { display: grid; gap: .5rem; color: var(--foreground); font-weight: 600; }
+.contact-form { display: grid; gap: .85rem; margin-top: 1rem; }
+.contact-form-fields { display: grid; gap: .85rem; }
+.contact-form label { display: grid; gap: .35rem; color: var(--foreground); font-weight: 600; }
 .contact-form input, .contact-form textarea { width: 100%; padding: .95rem 1rem; color: var(--foreground); background: color-mix(in srgb, var(--background) 82%, var(--muted)); border: 1px solid var(--border); border-radius: .65rem; font: inherit; font-weight: 400; transition: border-color .16s ease, box-shadow .16s ease; }
 .contact-form textarea { resize: vertical; min-height: 10rem; }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--muted-foreground); }
@@ -91,7 +91,7 @@ h2 { letter-spacing: 0.025em; }
 .contact-form-submit { justify-self: start; padding: .8rem 1.2rem; color: var(--accent-foreground); background: var(--accent); border: 1px solid var(--accent); border-radius: .45rem; font-weight: 700; cursor: pointer; transition: transform .16s ease, filter .16s ease; }
 .contact-form-submit:hover { filter: brightness(1.08); transform: translateY(-1px); }
 .contact-form-submit:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent); outline-offset: 3px; }
-.contact-form-status { min-height: 1.5em; color: var(--muted-foreground); font-size: .9rem; }
+.contact-form-status { min-height: 1.5em; margin: 0 !important; color: var(--muted-foreground); font-size: .9rem; }
 @media (min-width: 700px) { .contact-form-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .blog-pagination { justify-content: center; }
 .site-search-form { position: relative; max-width: 44rem; margin-top: 2rem; }
