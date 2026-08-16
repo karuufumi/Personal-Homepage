@@ -6,6 +6,10 @@ enableRobotsTXT = true
 [pagination]
   pagerSize = 4
 
+[frontmatter]
+  date = [":filename", ":default"]
+  publishDate = [":filename", ":default"]
+
 [params]
   description = "Computer Science student focused on full-stack development, backend systems, and software testing."
 

@@ -1,7 +1,6 @@
 ---
 title: A leetcode a day
-description: How solving leetcode everyday is changine me
-date: {{ .Date }}
+description: How solving Leetcode every day is changing me
 tags: [Blog, Personal Life, Programming]
 featured: false
 ---
@@ -13,4 +12,3 @@ Of course, saying this, i am not trynig to convey that i am an expert of DSA or 
 But, to be honest, it feels a whole lot more fun doing leetcode now, compared to the past where it feels like a laborious task to complete.
 
 In all honesty, practicing and solving it, as well as watching guides like Neetcode, is a unique way to practice Logical Thinking, like video games (which i am trying to avoid nowadays).
-
