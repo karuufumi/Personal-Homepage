@@ -1,77 +1,98 @@
 - slug: intelligent-restaurant-management-system
   title: Intelligent Restaurant Management System
   github: https://github.com/karuufumi/Intelligent-Restaurant-Management-System
-  description: A full-stack restaurant management platform for menu management, order processing, table workflows, and administrative operations.
-  tags: [React, TypeScript, NestJS, PostgreSQL, Docker, Apache Kafka, Kong Gateway]
+  description: A full-stack restaurant operations platform designed around service-oriented architecture, explicit domain boundaries, and event-driven communication.
+  tags: [React, TypeScript, NestJS, PostgreSQL, Apache Kafka, Kong Gateway, Docker]
   date: Jan 2026 – June 2026
   status: Academic Project
   progress: COMPLETE
-  problem: Restaurant operations involve connected menu, order, table, and administrative workflows. This project brings those workflows together in one application for staff and customer-facing use.
-  features: [Backend APIs and database models for restaurant workflows, Order and table-status management, Responsive interfaces for restaurant data and operations]
-  learned: Building this project helped me connect frontend features with backend APIs and database design while keeping the day-to-day workflow clear.
+  premise: ["Restaurant workflows are related but should not be tightly coupled in software. This project explores reservations, ordering, kitchen preparation, inventory, billing, permissions, and reporting as a maintainable system rather than one monolithic CRUD application.", "A central goal was to separate business rules from infrastructure concerns so operational domains could evolve independently."]
+  constraints: [Staff roles and permissions, Customers tables reservations and dining sessions, Menu orders and kitchen tickets, Inventory billing payments and reporting, Timely updates across services]
+  approach: ["The backend uses service-oriented boundaries and Hexagonal Architecture principles, keeping domain logic and application services separate from infrastructure adapters.", "NestJS and TypeScript power backend services, React provides the frontend, PostgreSQL stores relational data, Kong Gateway forms the API boundary, and Docker packages the system.", "Periodic polling was replaced with Apache Kafka publish-subscribe messaging so operational changes could propagate through events instead of repeated client requests."]
+  outcome: ["The system demonstrated a complete restaurant-management workflow with clearer separation between business domains and infrastructure concerns.", "In controlled testing, replacing polling with Kafka-based event delivery reduced order and status update latency from approximately 5 seconds to 1.2 seconds. The event-driven design also reduced repeated polling requests."]
+  lessons: [Hexagonal Architecture and service decomposition, Domain modeling around real business boundaries, Asynchronous messaging and API gateway patterns, Relational persistence and containerized multi-service development, Choosing between synchronous APIs and events]
+  practical: [Logistics platforms, Retail management software, Order-processing systems, Workflow orchestration platforms, Inventory systems]
 - slug: mobile-museum-companion
   title: Mobile Museum Companion
   github: https://github.com/karuufumi/Museum-Companion
-  description: A mobile museum companion application for artwork discovery, guided tours, saved items, and museum navigation support.
+  description: A native mobile museum companion for artwork discovery, guided tours, saved content, navigation, and semantic artwork exploration.
   tags: [SwiftUI, NestJS, PostgreSQL, ChromaDB]
   date: Feb 2026 – May 2026
   status: Academic Project
   progress: COMPLETE
-  problem: Museum visitors need an accessible way to discover artworks, follow tours, save items, and find their way through a visit. The application supports these connected activities in a mobile experience.
-  features: [Mobile screens and authentication flows, Backend APIs for artwork and tour management, Semantic search and AI-assisted recommendations using vector database workflows]
-  learned: This project gave me practice integrating mobile screens, authentication, APIs, and database-backed search without treating the recommendation features as a black box.
+  premise: ["Museum applications can expose a large amount of information while still making discovery difficult on a mobile device. This companion supports visitors as they discover artworks, follow tours, save content, and access contextual information.", "It combines structured museum data with a more exploratory visitor experience instead of acting only as a digital catalog."]
+  constraints: [Artworks metadata tours and saved items, User accounts and navigation information, Simple interaction while visitors move through a museum, Conceptual search beyond exact keywords]
+  approach: ["The mobile client was built with SwiftUI. NestJS provides backend APIs and PostgreSQL stores structured application data.", "The application includes artwork discovery, tour browsing, saved content, authentication, and museum-oriented navigation features.", "A ChromaDB-backed retrieval prototype experiments with semantic artwork search and contextual retrieval for a lightweight museum question-answering workflow."]
+  outcome: ["The result is a functioning mobile and backend application covering the main museum companion workflows while demonstrating how semantic retrieval can complement conventional search.", "The semantic component remains a prototype, not a production AI system. Its value is showing how structured data and vector-based retrieval can coexist in one product."]
+  lessons: [SwiftUI application structure, Mobile and backend communication, Authentication flows and API design, Relational data modeling, Semantic retrieval, Integrating experimental features without dominating the core application]
+  practical: [Galleries, Historical sites, Tourism applications, University campuses, Exhibitions and cultural archives]
 - slug: library-management-system
   title: Digital Library Management System
   github: https://github.com/karuufumi/Library-Mngt
-  description: A university library management system for borrowing, returning, catalog search, and user management.
+  description: A university library management system developed through a structured Scrum process with separate application, authentication, persistence, and testing concerns.
   tags: [.NET, FastAPI, React, PostgreSQL, MongoDB, Docker, Postman]
   date: Sep 2025 – Dec 2025
   status: Hybrid Project (Academic + Independent)
   progress: COMPLETE
-  problem: Developed a university library management system for borrowing, returning, catalog search, and user management through a five-sprint Scrum project.
-  features: [Simulated a real software development lifecycle through sprint planning iterative implementation testing and review, Built a small FastAPI-based API Gateway for authentication and authorization workflows using OAuth 2.0 concepts and two-factor authentication, Applied layered architecture to improve maintainability modularity and separation of concerns]
-  learned: This project gave me practice working through iterative Scrum delivery, designing an OAuth 2.0-oriented API Gateway, and separating responsibilities across the application.
+  premise: ["The goal was not only to build a library application, but to experience a more complete software-development lifecycle. The system covers registration, book management, borrowing, returning, authentication, and reporting.", "Five Scrum sprints made incremental delivery and engineering process part of the problem."]
+  constraints: [Student and staff registration, Authentication and authorization, Book search management borrowing returning and overdue handling, Relational and document-oriented data, Multi-person team coordination]
+  approach: ["The application uses a layered architecture to separate presentation, application logic, persistence, and supporting services.", "React provides the frontend, .NET handles core backend functionality, and FastAPI supports authentication-related services. PostgreSQL stores relational data, MongoDB holds document-oriented records and logs, and Docker packages services.", "OAuth 2.0 concepts and two-factor authentication inform the authentication workflows. Backend APIs and user-facing workflows were validated with Postman and structured manual testing across five Scrum sprints."]
+  outcome: ["The final system covers the primary workflows expected from a university library application and organizes several technologies within one architecture.", "Its main outcome was exposing the process around software itself: changing requirements, integration boundaries, testing responsibilities, coordination, and maintaining architecture as functionality evolves."]
+  lessons: [Layered architecture and API boundaries, Authentication and authorization, SQL and NoSQL persistence, Testing workflows, Scrum-based delivery, Integrating services built with different frameworks]
+  practical: [University administration systems, Inventory applications, Document-management systems, Membership platforms, Lending systems]
 - slug: simple-noise-protocol-implementation
   title: Simple Noise Protocol Implementation
   github: https://github.com/karuufumi/Mini-Noise
-  description: A learning-oriented, simplified secure communication protocol prototype based on the Noise Protocol Framework.
+  description: A learning-oriented implementation of a simplified secure communication protocol inspired by the Noise Protocol Framework.
   tags: [Python, WebSocket, POSIX]
   date: Apr 2026 – Present
   status: Independent Project
   progress: IN PROGRESS
-  problem: Secure communication protocols have several connected steps that are easier to understand by implementing and testing a small, focused prototype. This project explores those steps without presenting itself as production cryptography.
-  features: [Handshake logic and key agreement, Encryption and authenticated message exchange, WebSocket-based communication flow]
-  learned: The work has helped me think more carefully about message order, key material, and the boundaries between a protocol design and a safe production implementation.
+  premise: ["Secure communication is not only an encryption problem. This learning-oriented prototype explores how peers establish shared state, derive keys, authenticate messages, and transition from a handshake into encrypted transport.", "It studies a simplified subset of Noise ideas rather than claiming to reproduce the full specification or replace established implementations."]
+  constraints: [Handshake state, Peer key material and derived shared secrets, Encryption keys and message state, Authenticated ciphertext, Explicit understandable protocol transitions]
+  approach: ["The prototype is written in Python using WebSocket transport and POSIX-oriented networking concepts.", "It makes handshake initialization, key agreement, shared cryptographic-state derivation, authenticated encryption, and encrypted message exchange explicit so each transition can be inspected and reasoned about."]
+  outcome: ["The project produced a working simplified secure-message exchange prototype that can progress from an initial handshake into authenticated encrypted communication.", "The result is educational rather than performance-oriented, making handshake state, key derivation, authenticated encryption, and secure transport more concrete."]
+  lessons: [Cryptographic handshakes and key agreement, Key derivation and authenticated encryption, Protocol state machines, Secure message framing, Network transport, The difference between protocol learning and production cryptography]
+  practical: [End-to-end encrypted messaging, Peer-to-peer communication, Secure device communication, Decentralized systems, Offline communication systems]
 - slug: computer-hardware-benchmarking
   title: Computer Hardware Benchmarking using Statistical Learning Approaches
   github: https://github.com/karuufumi/Computer-Benchmark
-  description: A hardware benchmarking analysis workflow for processing experimental benchmark data and identifying performance patterns.
+  description: A reproducible data-analysis workflow for cleaning hardware benchmark data, comparing performance, identifying patterns, and producing interpretable experimental results.
   tags: [R, Python, Pandas, NumPy, scikit-learn, Matplotlib]
   date: June 2024 – Feb 2026
   status: Independent Project
   progress: COMPLETE
-  problem: Benchmark results can be difficult to interpret when they span hardware configurations and repeated experiments. This workflow processes the data and presents patterns that support comparison and reporting.
-  features: [R workflow later extended into a Python data-processing pipeline, Statistical learning methods for performance comparison, Visualizations for benchmark interpretation and reporting]
-  learned: I became more comfortable cleaning experimental data, comparing results carefully, and using visualizations to support a clear interpretation rather than just producing charts.
+  premise: ["Hardware benchmark numbers are easy to collect but harder to interpret when hardware characteristics vary at the same time. This project explored a systematic, reproducible way to compare performance.", "The goal was analysis and interpretation rather than a predictive product."]
+  constraints: [Raw benchmark observations, Data cleaning and feature preparation, Multiple hardware characteristics and measurements, Statistical comparisons and model experiments, Reproducible visualization and reporting]
+  approach: ["The project began as an R workflow and later expanded into Python. Pandas and NumPy handle processing, scikit-learn supports statistical-learning experiments, and Matplotlib creates visualizations.", "The pipeline loads results, cleans and normalizes data, prepares features, explores relationships, compares configurations, runs analytical experiments, and generates outputs for interpretation and reporting."]
+  outcome: ["The result is a reproducible benchmarking pipeline that produces consistent analytical and visual outputs from experimental data.", "Moving from a collection of R analyses to a structured Python workflow made it easier to repeat experiments, compare configurations, and generate figures for academic-style reporting."]
+  lessons: [Experimental-data processing, Exploratory analysis and feature preparation, Statistical learning, Visualization, Reproducible analytical workflows, Using machine learning to understand data rather than only predict]
+  practical: [System benchmarking, Performance engineering, Cloud instance comparison, Compiler optimization experiments, Database benchmarks, Infrastructure performance studies]
 - slug: automated-testing-ecommerce-website
   title: Automated Testing for E-Commerce Website
   github: https://github.com/quangduy2410/Software-Testing-Project-3
-  description: An end-to-end automated testing suite for validating key e-commerce user workflows.
+  description: An end-to-end software-testing project that combines formal test-case design techniques with browser automation for common e-commerce workflows.
   tags: [Python, Selenium, Pytest, WebDriver, HTML/CSS]
   date: Oct 2026 – Dec 2026
   status: Academic Project
   progress: PLANNED
-  problem: Developed an end-to-end automated testing suite for an e-commerce website using Python and Selenium to validate key user workflows.
-  features: [Applied black-box testing techniques including Boundary Value Analysis Equivalence Partitioning Decision Table Testing and Use Case Testing, Automated product browsing search cart management checkout login and form-validation scenarios, Documented test cases expected results actual results and defect observations for structured quality assurance]
-  learned: This project focuses on translating testing techniques into repeatable browser-based checks and clear quality-assurance documentation.
+  premise: ["Browser automation is most useful when it is built on well-designed test cases. This project studies the complete testing workflow: derive conditions, design cases, externalize data, automate repeatable scenarios, execute the suite, and compare expected with actual behavior.", "An e-commerce site provides realistic workflows and validation rules for this learning project."]
+  constraints: [Login browsing search and form validation, Shopping cart and checkout operations, Valid invalid boundary and alternative data, Reusable test data, Browser timing state and isolation concerns]
+  approach: ["Test cases are designed with Boundary Value Analysis, Equivalence Partitioning, Decision Tables, and Use Cases.", "Python is the automation language; Selenium and WebDriver automate browser interaction, while Pytest organizes and executes the suite. Test data is externalized where appropriate, and observed differences can be documented as defects rather than unexplained script failures."]
+  outcome: ["The project is planned as a repeatable end-to-end suite for important e-commerce workflows.", "Its intended outcome is to connect formal test design with implementation-level automation, so execution remains tied to explicit conditions and expected results. Automated tests support quality assurance; they do not guarantee correctness."]
+  lessons: [Test-case design, Boundary Value Analysis and Equivalence Partitioning, Decision Tables and Use Cases, Selenium Pytest and WebDriver, Reusable browser workflows, Test-data separation, Expected-versus-actual analysis]
+  practical: [Regression testing, CI validation, Web application quality assurance, Checkout workflows, Administrative portals, Browser-based business systems]
 - slug: bank-account-management-system
   title: Bank Account Management System
   github: https://github.com/karuufumi/Bank-Account-Management-System
-  description: A frontend-focused banking account management system for account workflows and transaction interfaces.
+  description: A frontend-focused banking interface built to practice component-driven web development, responsive design, API integration, and transaction-oriented user workflows.
   tags: [React, TypeScript, Next.js, Tailwind CSS]
   date: Sep 2025 – Jan 2026
   status: Independent Project
   progress: COMPLETE
-  problem: Account and transaction interfaces need to present financial information clearly while supporting common user actions. This project focuses on the frontend workflows for those interactions.
-  features: [Responsive account-overview and balance screens, Transaction-history and user-interaction flows, Backend API integration with manual testing and debugging]
-  learned: The project strengthened my frontend implementation and debugging habits, especially when checking whether the interface behaved correctly with real API responses.
+  premise: ["Banking interfaces present dense information while requiring clear, predictable interaction. This project focused on frontend architecture and interaction design rather than real banking infrastructure.", "It models common account-management workflows without attempting to reproduce a production financial system."]
+  constraints: [Account information balances and transaction history, Transaction-oriented actions and interaction states, Responsive layouts, Backend data integration without mixing network logic into presentation components]
+  approach: ["The frontend uses React, TypeScript, and Next.js. Tailwind CSS provides responsive styling and reusable visual patterns.", "Reusable components represent account information, transaction data, and interaction flows. Backend APIs connect interface state with application data, while manual testing and debugging validate behavior during development."]
+  outcome: ["The project produced a responsive frontend for structured account information and transaction-oriented workflows.", "Its main value was improving frontend organization: TypeScript use, reusable React components, responsive layouts, backend integration, and predictable state transitions."]
+  lessons: [React component design, TypeScript in frontend applications, Next.js project structure, Responsive UI implementation, API integration, State-driven interfaces, Manual debugging and validation]
+  practical: [Financial dashboards, Administrative systems, Analytics interfaces, Customer portals, Account-management applications, Information-dense business software]

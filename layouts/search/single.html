@@ -14,7 +14,7 @@
 </main>
 <div id="search-index" hidden>
   {{ range $posts }}<span data-search-item data-title="{{ .Title }}" data-description="{{ .Description | default "" }}" data-url="{{ .RelPermalink }}" data-type="Blog" data-content="{{ .Plain }}" data-keywords="{{ delimit (.Params.tags | default slice) " " }}"></span>{{ end }}
-  {{ range site.Data.projects }}<span data-search-item data-title="{{ .title }}" data-description="{{ .description }}" data-url="{{ printf "/projects/%s/" .slug | relURL }}" data-type="Project" data-content="{{ printf "%s %s %s" .problem (delimit .features " ") .learned }}" data-keywords="{{ delimit .tags " " }}"></span>{{ end }}
+  {{ range site.Data.projects }}<span data-search-item data-title="{{ .title }}" data-description="{{ .description }}" data-url="{{ printf "/projects/%s/" .slug | relURL }}" data-type="Project" data-content="{{ printf "%s %s %s %s" (delimit .premise " ") (delimit .constraints " ") (delimit .approach " ") (delimit .lessons " ") }}" data-keywords="{{ delimit .tags " " }}"></span>{{ end }}
   {{ with $photos }}<span data-search-item data-title="{{ .Title }}" data-description="{{ .Description | default "" }}" data-url="{{ .RelPermalink }}" data-type="Photos" data-content="{{ .Plain }}" data-keywords="photography photos gallery images"></span>{{ end }}
 </div>
 <script defer src="{{ "js/search.js" | relURL }}"></script>
