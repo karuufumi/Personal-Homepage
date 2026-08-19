@@ -1,1 +1,16 @@
-{{ define "main" }}<main id="main-content" class="app-layout py-12"><h1 class="text-3xl font-bold">Page not found</h1><p class="mt-4">That route is not part of this site.</p><a class="text-accent mt-6 inline-block hover:underline" href="{{ "/" | relURL }}">Return home</a></main>{{ end }}
+{{ define "main" }}
+  <main id="main-content" class="app-layout error-page">
+    <section class="error-page__content" aria-labelledby="error-page-title">
+      <p class="error-page__code" aria-hidden="true">404</p>
+      <p class="text-sm uppercase text-accent">Wrong turn</p>
+      <h1 id="error-page-title">This page is not here.</h1>
+      <p class="error-page__description">
+        The link may be outdated, or the page may have moved. The rest of the portfolio is still where it should be.
+      </p>
+      <div class="error-page__actions">
+        <a class="error-page__primary-action" href="{{ "/" | relURL }}">Go to home</a>
+        <a class="error-page__secondary-action" href="{{ "/projects/" | relURL }}">Browse projects</a>
+      </div>
+    </section>
+  </main>
+{{ end }}
