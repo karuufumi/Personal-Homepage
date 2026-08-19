@@ -8,11 +8,13 @@
         {{ range slice (dict "label" "About" "url" "/about/") (dict "label" "Project" "url" "/projects/") (dict "label" "Blog" "url" "/posts/") (dict "label" "Photos" "url" "/photos/") (dict "label" "CV" "url" "/cv/") (dict "label" "Contact" "url" "/contact/") }}
         <li><a href="{{ .url | relURL }}" class="{{ if hasPrefix $current .url }}active-nav{{ end }}">{{ .label }}</a></li>
         {{ end }}
+        <li><a href="https://github.com/karuufumi" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><img class="site-icon" src="{{ "icons/github.svg" | relURL }}" alt=""></a></li>
         <li><a href="{{ "/search/" | relURL }}" aria-label="Search"><img class="site-icon" src="{{ "icons/IconSearch.svg" | relURL }}" alt="Search"></a></li>
         <li><button id="theme-toggle" class="theme-switch" type="button" aria-label="Switch to dark mode" title="Switch to dark mode"><img class="site-icon theme-icon-dark" src="{{ "icons/IconMoon.svg" | relURL }}" alt=""><img class="site-icon theme-icon-light" src="{{ "icons/IconSunHigh.svg" | relURL }}" alt=""></button></li>
       </ul>
       <details class="mobile-menu"><summary aria-label="Open navigation menu"><img class="site-icon" src="{{ "icons/IconMenuDeep.svg" | relURL }}" alt=""></summary><ul>
         {{ range slice (dict "label" "About" "url" "/about/") (dict "label" "Project" "url" "/projects/") (dict "label" "Blog" "url" "/posts/") (dict "label" "Photos" "url" "/photos/") (dict "label" "CV" "url" "/cv/") (dict "label" "Contact" "url" "/contact/") }}<li><a href="{{ .url | relURL }}">{{ .label }}</a></li>{{ end }}
+        <li><a href="https://github.com/karuufumi" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><img class="site-icon" src="{{ "icons/github.svg" | relURL }}" alt=""></a></li>
         <li><a href="{{ "/search/" | relURL }}">Search</a></li><li><button id="theme-toggle-mobile" class="theme-switch" type="button">Theme</button></li>
       </ul></details>
     </nav>

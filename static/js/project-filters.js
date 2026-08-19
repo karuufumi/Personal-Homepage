@@ -22,7 +22,7 @@ if (projectList) {
     if (control.dataset.filterKey === "technology") {
       const selected = (control.dataset.selected || "").split("|").filter(Boolean);
       const projectTechnologies = card.dataset.technologies.split("|");
-      return selected.length === 0 || selected.every((technology) => projectTechnologies.includes(technology));
+      return selected.length === 0 || selected.some((technology) => projectTechnologies.includes(technology));
     }
     return control.dataset.value === "all" || card.dataset[control.dataset.filterKey] === control.dataset.value;
   };
@@ -51,6 +51,7 @@ if (projectList) {
     const options = [...control.querySelectorAll("[data-filter-option]")];
     const label = control.querySelector("[data-filter-label]");
     const isMulti = control.dataset.multi === "true";
+    const selectedTechnologies = control.querySelector("[data-selected-technologies]");
 
     const updateMultiLabel = () => {
       const selected = selectedTechnologyOptions(control);
@@ -58,7 +59,13 @@ if (projectList) {
       control.dataset.value = selected.length ? selected.map((option) => option.dataset.value).join("|") : "all";
       label.textContent = selected.length === 0
         ? "All technologies"
-        : selected.length === 1 ? selected[0].textContent : `${selected.length} technologies`;
+        : "Selected technologies";
+      if (selectedTechnologies) {
+        selectedTechnologies.hidden = selected.length === 0;
+        selectedTechnologies.textContent = selected.length === 0
+          ? ""
+          : selected.map((option) => option.textContent).join(" · ");
+      }
     };
 
     const selectOption = (option) => {
@@ -148,6 +155,11 @@ if (projectList) {
       control.dataset.value = "all";
       control.dataset.selected = "";
       control.querySelector("[data-filter-label]").textContent = option.textContent;
+      const selectedTechnologies = control.querySelector("[data-selected-technologies]");
+      if (selectedTechnologies) {
+        selectedTechnologies.hidden = true;
+        selectedTechnologies.textContent = "";
+      }
       control.querySelectorAll("[data-filter-option]").forEach((item) => item.setAttribute("aria-selected", String(item === option)));
     });
     updateProjects();

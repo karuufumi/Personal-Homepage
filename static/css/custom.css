@@ -44,7 +44,17 @@ h2 { letter-spacing: 0.025em; }
 .project-title { margin-top: .65rem; font-size: 1.35rem; font-weight: 600; line-height: 1.3; }
 .project-title a { text-decoration: none; text-decoration-thickness: 1px; text-underline-offset: .22em; }
 .project-title a:hover { color: var(--accent); text-decoration: underline; }
+.project-title-row { display: flex; align-items: flex-start; gap: .5rem; }
+.project-title-row > a:first-child, .project-title-row > h1 { min-width: 0; }
+.project-title-row > a:first-child { flex: 1 1 auto; }
 .project-description { max-width: 43rem; margin-top: 1rem; line-height: 1.65; }
+.project-github-link { display: inline-flex; align-items: center; justify-content: center; margin-top: 1rem; padding: .4rem; border: 1px solid var(--accent); border-radius: .35rem; transition: background-color .16s ease, transform .16s ease; }
+.project-github-link:hover, .project-github-link:focus-visible { background: color-mix(in srgb, var(--background) 70%, var(--muted)); outline: 0; transform: translateY(-1px); }
+.project-github-link:focus-visible { box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent); }
+.project-github-link--title { flex: 0 0 auto; margin: .1rem 0 0; padding: .25rem; }
+.project-github-link--title .site-icon { width: 1.1rem; height: 1.1rem; }
+.project-repository { display: flex; align-items: center; gap: .5rem; margin-top: 1.25rem; font-weight: 600; }
+.project-github-link--repository { margin: 0; padding: .3rem; }
 .project-filters { margin-top: 3rem; padding: 1.25rem; background: color-mix(in srgb, var(--background) 82%, var(--muted)); border: 1px solid var(--border); border-radius: .65rem; }
 .project-filters-heading { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .project-filters-heading h2 { font-size: 1.2rem; font-weight: 700; }
@@ -57,6 +67,8 @@ h2 { letter-spacing: 0.025em; }
 .project-filter-trigger { display: flex; align-items: center; justify-content: space-between; gap: .75rem; width: 100%; padding: .7rem .75rem; color: var(--foreground); background: var(--background); border: 1px solid var(--border); border-radius: .4rem; font: inherit; font-weight: 400; text-align: start; cursor: pointer; transition: border-color .16s ease, box-shadow .16s ease, background-color .16s ease; }
 .project-filter-trigger:hover, .project-filter-trigger[aria-expanded="true"] { background: color-mix(in srgb, var(--background) 75%, var(--muted)); border-color: var(--accent); }
 .project-filter-trigger:focus-visible { border-color: var(--accent); outline: 3px solid color-mix(in srgb, var(--accent) 18%, transparent); outline-offset: 1px; }
+.project-selected-technologies { display: inline-block; max-width: 100%; margin-top: .5rem; padding: .3rem .55rem; overflow-wrap: anywhere; color: var(--accent-foreground); background: var(--accent); border-radius: 999px; font-size: .8rem; line-height: 1.3; }
+.project-selected-technologies[hidden] { display: none; }
 .project-filter-chevron { color: var(--accent); font-size: 1.2em; line-height: .7; transition: transform .16s ease; }
 .project-filter-trigger[aria-expanded="true"] .project-filter-chevron { transform: rotate(180deg); }
 .project-filter-menu { position: absolute; z-index: 20; inset-inline: 0; top: calc(100% + .4rem); max-height: 16rem; padding: .35rem; overflow-y: auto; background: var(--background); border: 1px solid var(--accent); border-radius: .5rem; box-shadow: 0 .75rem 2rem color-mix(in srgb, #000 28%, transparent); }

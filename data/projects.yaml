@@ -1,5 +1,6 @@
 - slug: intelligent-restaurant-management-system
   title: Intelligent Restaurant Management System
+  github: https://github.com/karuufumi/Intelligent-Restaurant-Management-System
   description: A full-stack restaurant management platform for menu management, order processing, table workflows, and administrative operations.
   tags: [React, TypeScript, NestJS, PostgreSQL, Docker, Apache Kafka, Kong Gateway]
   date: Jan 2026 – June 2026
@@ -10,6 +11,7 @@
   learned: Building this project helped me connect frontend features with backend APIs and database design while keeping the day-to-day workflow clear.
 - slug: mobile-museum-companion
   title: Mobile Museum Companion
+  github: https://github.com/karuufumi/Museum-Companion
   description: A mobile museum companion application for artwork discovery, guided tours, saved items, and museum navigation support.
   tags: [SwiftUI, NestJS, PostgreSQL, ChromaDB]
   date: Feb 2026 – May 2026
@@ -19,7 +21,8 @@
   features: [Mobile screens and authentication flows, Backend APIs for artwork and tour management, Semantic search and AI-assisted recommendations using vector database workflows]
   learned: This project gave me practice integrating mobile screens, authentication, APIs, and database-backed search without treating the recommendation features as a black box.
 - slug: library-management-system
-  title: Library Management System
+  title: Digital Library Management System
+  github: https://github.com/karuufumi/Library-Mngt
   description: A university library management system for borrowing, returning, catalog search, and user management.
   tags: [.NET, FastAPI, React, PostgreSQL, MongoDB, Docker, Postman]
   date: Sep 2025 – Dec 2025
@@ -30,6 +33,7 @@
   learned: This project gave me practice working through iterative Scrum delivery, designing an OAuth 2.0-oriented API Gateway, and separating responsibilities across the application.
 - slug: simple-noise-protocol-implementation
   title: Simple Noise Protocol Implementation
+  github: https://github.com/karuufumi/Mini-Noise
   description: A learning-oriented, simplified secure communication protocol prototype based on the Noise Protocol Framework.
   tags: [Python, WebSocket, POSIX]
   date: Apr 2026 – Present
@@ -40,6 +44,7 @@
   learned: The work has helped me think more carefully about message order, key material, and the boundaries between a protocol design and a safe production implementation.
 - slug: computer-hardware-benchmarking
   title: Computer Hardware Benchmarking using Statistical Learning Approaches
+  github: https://github.com/karuufumi/Computer-Benchmark
   description: A hardware benchmarking analysis workflow for processing experimental benchmark data and identifying performance patterns.
   tags: [R, Python, Pandas, NumPy, scikit-learn, Matplotlib]
   date: June 2024 – Feb 2026
@@ -50,6 +55,7 @@
   learned: I became more comfortable cleaning experimental data, comparing results carefully, and using visualizations to support a clear interpretation rather than just producing charts.
 - slug: automated-testing-ecommerce-website
   title: Automated Testing for E-Commerce Website
+  github: https://github.com/quangduy2410/Software-Testing-Project-3
   description: An end-to-end automated testing suite for validating key e-commerce user workflows.
   tags: [Python, Selenium, Pytest, WebDriver, HTML/CSS]
   date: Oct 2026 – Dec 2026
@@ -60,6 +66,7 @@
   learned: This project focuses on translating testing techniques into repeatable browser-based checks and clear quality-assurance documentation.
 - slug: bank-account-management-system
   title: Bank Account Management System
+  github: https://github.com/karuufumi/Bank-Account-Management-System
   description: A frontend-focused banking account management system for account workflows and transaction interfaces.
   tags: [React, TypeScript, Next.js, Tailwind CSS]
   date: Sep 2025 – Jan 2026
