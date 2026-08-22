@@ -18,6 +18,8 @@ Ho Chi Minh City University of Technology, VNU-HCM · October 2022 – Present
 - GPA: 3.2/4.0 (8.1/10)
 - OISP Scholarship, Semester 242
 
+{{< oisp-scholarship >}}
+
 ## Skills
 
 **Languages:** Python, C/C++, JavaScript, TypeScript, Swift, SQL, R, HTML/CSS

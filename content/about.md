@@ -53,6 +53,8 @@ Ho Chi Minh City University of Technology, VNU-HCM · October 2022 – Present
 - OISP Scholarship, Semester 242
 - Relevant coursework: Data Structures and Algorithms, Computer Network, Mobile Application Development, Discrete Mathematics, Database Systems, Software Engineering, Operating Systems, and Software Architecture
 
+{{< oisp-scholarship >}}
+
 ## Certifications
 
 - **IELTS 7.0** — IDP Vietnam, May 2022
